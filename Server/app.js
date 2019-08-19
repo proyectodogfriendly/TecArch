@@ -9,6 +9,8 @@ const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
 
+const cors = require('cors')
+
 require("./configs/mongoose.config");
 
 const app_name = require("./package.json").name;
@@ -34,6 +36,17 @@ app.use(
   })
 );
 
+// CORS middleware configuración
+const whitelist = ['http://localhost:3000']
+const corsOptions = {
+ origin: (origin, cb) => {
+   const originIsWhitelisted = whitelist.includes(origin)
+   cb(null, originIsWhitelisted)
+ },
+ credentials: true
+}
+app.use(cors(corsOptions))
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -45,5 +58,6 @@ app.locals.title = "Express - Generated with IronGenerator";
 const index = require("./routes/index");
 app.use("/", index);
 app.use("/api", require("./routes/competition.routes"));
+app.use("/api", require("./routes/proposal.routes"));
 
 module.exports = app;

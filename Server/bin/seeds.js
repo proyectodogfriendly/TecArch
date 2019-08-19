@@ -26,6 +26,17 @@ const competitions = [
     adjudicator: "lalala",
     state: "open",
     conditions: "lalala"
+  },
+  {
+    imageUrl: "lalala2",
+    title: "lalala2",
+    category: "lalala2",
+    description: "lalala2",
+    address: "lalala2",
+    amount: 2500,
+    adjudicator: "lalala2",
+    state: "close",
+    conditions: "lalala2"
   }
 ];
 
