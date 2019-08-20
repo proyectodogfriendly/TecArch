@@ -5,11 +5,11 @@ const Competition = require("../models/competition");
 
 router.get("/getAllCompetitions", (req, res) => {
   Competition.find()
-    .then(
-      allTheCompetitions => res.json(allTheCompetitions),
-      console.log(allTheCompetitions)
-    )
-    .catch(err => console.log(err));
+    .then(comp => {
+      res.json(comp);
+      console.log(comp);
+    })
+    .catch(err => console.log("Este es el error" + err));
 });
 
 router.get("/getOneCompetition/:id", (req, res) =>
