@@ -6,10 +6,13 @@ import CompetitionList from './components/Competition-list'
 import ProposalList from './components/Proposal-list'
 import ProposalDetail from './components/ProposalDetail'
 
+
+import NavBar from './components/Navbar'
 function App() {
   return (
 
     <>
+    <NavBar></NavBar>
       <Switch>
         <Route path="/competitions" exact component={CompetitionList} />
         <Route path="/proposals" exact component={ProposalList} />
