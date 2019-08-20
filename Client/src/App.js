@@ -13,6 +13,7 @@ import ProposalDetail from "./components/ProposalDetail";
 
 import NavBar from "./components/Navbar";
 
+
 class App extends Component {
   constructor() {
     super();
@@ -37,10 +38,19 @@ class App extends Component {
     }
   };
 
+
   render() {
     return (
       <>
-        <NavBar />
+       {/* <Helmet>
+                <title>My App</title>
+                <meta charSet="utf-8" />
+                <meta name="description" content="A React.js application" />
+                <script type="text/javascript" src="./javascript/jquery.min.js"></script>
+                <script type="text/javascript" src="./javascript/plugins.js"></script>
+                <script type="text/javascript" src="./javascript/scripts.js"></script>
+                </Helmet> */}
+        <NavBar/>
         <Switch>
           <Route
             path="/signup"

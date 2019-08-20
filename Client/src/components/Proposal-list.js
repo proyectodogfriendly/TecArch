@@ -3,7 +3,13 @@ import React, { Component } from 'react'
 import Services from '../services/proposal.services'
 
 import ProposalCard from './ProposalCard'
+import '../css/proposal-card.css'
 
+// // import '../javascript/plugins.js'
+// import '../javascript/jquery.min.js'
+// import '../javascript/scripts.js'
+
+// import $ from 'jquery';
 
 class ProposalList extends Component {
 
@@ -20,16 +26,25 @@ class ProposalList extends Component {
                 this.setState({ proposals: response.data })
             })
             .catch(err => console.log(err))
+
+            
     }
+
+   
+
 
 
     render() {
 
         console.log(this.state.proposals)
+        console.log(this.script)
         return (
             <>
                 <div className="container">
-
+                    <div className="partcile-dec" data-parcount="70">
+                        <canvas className="myCanvas">   
+                        </canvas>
+                    </div> 
                     <h1>Listado de propuestas para el concurso </h1>
 
                     <div className="row proposal-list">
@@ -37,6 +52,7 @@ class ProposalList extends Component {
                         {this.state.proposals.map(proposal => <ProposalCard key={proposal._id} {...proposal} />)}
 
                     </div>
+                   
                 </div>
             </>
         )
