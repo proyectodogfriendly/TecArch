@@ -7,6 +7,12 @@ import AuthServices from "./services/auth.services";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 
+import CompetitionList from "./components/Competition-list";
+import ProposalList from "./components/Proposal-list";
+import ProposalDetail from "./components/ProposalDetail";
+
+import NavBar from "./components/Navbar";
+
 class App extends Component {
   constructor() {
     super();
@@ -34,6 +40,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <NavBar />
         <Switch>
           <Route
             path="/signup"
@@ -45,10 +52,12 @@ class App extends Component {
             exact
             render={match => <Login {...match} setUser={this.setTheUser} />}
           />
+          <Route path="/competitions" exact component={CompetitionList} />
+          <Route path="/proposals" exact component={ProposalList} />
+          <Route path="/proposals/:id" exact component={ProposalDetail} />
         </Switch>
       </>
     );
   }
 }
-
 export default App;

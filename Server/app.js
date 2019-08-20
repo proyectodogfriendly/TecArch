@@ -13,6 +13,8 @@ const cors = require("cors");
 const session = require("express-session");
 const passport = require("passport");
 
+const cors = require("cors");
+
 require("./configs/mongoose.config");
 require("./configs/passport.config");
 
@@ -38,6 +40,17 @@ app.use(
     sourceMap: true
   })
 );
+
+// CORS middleware configuración
+const whitelist = ["http://localhost:3000"];
+const corsOptions = {
+  origin: (origin, cb) => {
+    const originIsWhitelisted = whitelist.includes(origin);
+    cb(null, originIsWhitelisted);
+  },
+  credentials: true
+};
+app.use(cors(corsOptions));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -78,5 +91,6 @@ const index = require("./routes/index");
 app.use("/", index);
 app.use("/api", require("./routes/competition.routes"));
 app.use("/api", require("./routes/auth.routes"));
+app.use("/api", require("./routes/proposal.routes"));
 
 module.exports = app;
