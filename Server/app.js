@@ -8,7 +8,6 @@ const hbs = require("hbs");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
-const cors = require("cors");
 
 const session = require("express-session");
 const passport = require("passport");
@@ -57,16 +56,7 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
-// CORS middleware
-const whitelist = ["http://localhost:3000"];
-const corsOptions = {
-  origin: (origin, cb) => {
-    const originIsWhitelisted = whitelist.includes(origin);
-    cb(null, originIsWhitelisted);
-  },
-  credentials: true
-};
-app.use(cors(corsOptions));
+
 
 // Configuración de sesión
 app.use(
