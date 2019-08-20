@@ -27,7 +27,7 @@ class NavBar extends Component {
         const saludo = this.props.userInSession ? this.props.userInSession.data.username : 'invitado'
 
 
-        if (this.props.userInSession) {
+        if (this.props.userInSession) { //sesión iniciada
             return (
                 <>
                     <div className="toggle-menu" onClick={this.toggleMenu}>&equiv; </div>
@@ -36,9 +36,8 @@ class NavBar extends Component {
                         <nav>
                             <ul>
                                 <li><Link to="/">Inicio</Link></li>
-                                <li><Link to="/profile">Perfil</Link></li>
                                 <li><Link to="/competitions">Concursos actuales</Link></li>
-                                <li><Link to="/proposals">Portfolio Propuestas</Link></li>
+                                <li><Link to="/portfolio">Portfolio</Link></li>
                                 <li><div onClick={this.logout}>Cerrar sesión</div></li>
                                 <li><small>Bienvenid@, {saludo}</small></li>
                             </ul>
@@ -46,7 +45,7 @@ class NavBar extends Component {
                     </header>
                 </>
             )
-        } else {
+        } else { //sesión no iniciada
             return (
                 <>
                     <div className="toggle-menu" onClick={this.toggleMenu}>&equiv; </div>
@@ -56,9 +55,8 @@ class NavBar extends Component {
                             <ul>
                                 <li><Link to="/">Inicio</Link></li>
                                 <li><Link to="/competitions">Concursos actuales</Link></li>
-                                {/* <li><Link to="/portfolio">Portfolio</Link></li> */}
-                                <li><Link to="/signup">Acceso Instituciones</Link></li>
-                                <li><Link to="/signup">Acceso Profesionales</Link></li>
+                                <li><Link to="/portfolio">Portfolio</Link></li>
+                                <li><Link to="/signup">Registro</Link></li>
                                 <li><Link to="/login">Inicio de sesión</Link></li>
                                 <li><small>Bienvenid@, {saludo}</small></li>
                             </ul>
