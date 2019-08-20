@@ -6,7 +6,8 @@ class Signup extends Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      role: "Seleccionar"
     };
     this.authServices = new AuthServices();
   }
@@ -18,16 +19,18 @@ class Signup extends Component {
 
   handleFormSubmit = e => {
     e.preventDefault();
-    const { username, password } = this.state;
+    const { username, password, role } = this.state;
+    console.log(username, password, role);
     this.authServices
-      .signup(username, password)
+      .signup(username, password, role)
       .then(theNewUser => {
         this.setState({
           username: "",
-          password: ""
+          password: "",
+          role: "Seleccionar"
         });
         this.props.setUser(theNewUser);
-        this.props.history.push("/");
+        this.props.history.push("/login");
       })
       .catch(err => console.log(err.response.data.message));
   };
@@ -37,7 +40,7 @@ class Signup extends Component {
       <div className="container">
         <h1>Registro de usuario</h1>
         <form onSubmit={this.handleFormSubmit}>
-          Usuario:{" "}
+          Usuario:
           <input
             name="username"
             type="text"
@@ -45,7 +48,8 @@ class Signup extends Component {
             onChange={this.handleInputChange}
           />{" "}
           <br />
-          Contraseña:{" "}
+          <br />
+          Contraseña:
           <input
             name="password"
             type="password"
@@ -53,6 +57,18 @@ class Signup extends Component {
             onChange={this.handleInputChange}
           />{" "}
           <br />
+          <br />
+          Tipo de usuario:
+          <select
+            name="role"
+            onChange={this.handleInputChange}
+            value={this.state.role}
+          >
+            <option value={""} />
+
+            <option value={"INSTITUTION"}>Institución</option>
+            <option value={"PROFESSIONAL"}>Profesional</option>
+          </select>
           <input type="submit" value="Registrar" />
         </form>
       </div>

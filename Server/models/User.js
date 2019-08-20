@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema(
   {
     username: String,
-    password: String
-    // role: {
-    //   type: String,
-    //   enum: ["ADMIN", "PROFESSIONAL","INSTITUTION"],
-    //   default: "PROFESSIONAL"
-    // }
+    password: String,
+    role: {
+      type: String,
+      enum: ["ADMIN", "INSTITUTION", "PROFESSIONAL"],
+      default: "PROFESSIONAL"
+    }
   },
   { timestamps: true }
 );

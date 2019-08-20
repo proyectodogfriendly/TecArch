@@ -8,8 +8,8 @@ export default class Services {
     });
   }
 
-  signup = (username, password) =>
-    this.service.post("signup", { username, password });
+  signup = (username, password, role) =>
+    this.service.post("signup", { username, password, role });
   login = (username, password) =>
     this.service.post("login", { username, password });
   logout = () => this.service.post("logout");

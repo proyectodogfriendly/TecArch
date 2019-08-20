@@ -11,13 +11,9 @@ router.get("/getAllCompetitions", (req, res) => {
       console.log(comp);
     })
     .catch(err => console.log("Este es el error" + err));
-<<<<<<< HEAD
 });
-=======
- });
 
 //mostrar detalle de un concurso
->>>>>>> 9ed1db8934f9d7b29f47790018c33614f2373d0a
 
 router.get("/getOneCompetition/:id", (req, res) =>
   Competition.findById(req.params.id)
