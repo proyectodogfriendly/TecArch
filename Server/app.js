@@ -12,6 +12,7 @@ const cors = require("cors");
 
 const session = require("express-session");
 const passport = require("passport");
+const MongoStore = require("connect-mongo")(session);
 
 require("./configs/mongoose.config");
 require("./configs/passport.config");
@@ -58,9 +59,10 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 // Configuración de sesión
 app.use(
   session({
-    secret: "Whatebver",
+    secret: "Stop",
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
 app.use(passport.initialize());

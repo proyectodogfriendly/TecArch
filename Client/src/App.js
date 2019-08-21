@@ -17,7 +17,6 @@ import PortfolioDetail from "./components/PortfolioDetail";
 
 import NavBar from "./components/Navbar";
 
-
 class App extends Component {
   constructor() {
     super();
@@ -42,11 +41,10 @@ class App extends Component {
     }
   };
 
-
   render() {
     return (
       <>
-       {/* <Helmet>
+        {/* <Helmet>
                 <title>My App</title>
                 <meta charSet="utf-8" />
                 <meta name="description" content="A React.js application" />
@@ -54,7 +52,10 @@ class App extends Component {
                 <script type="text/javascript" src="./javascript/plugins.js"></script>
                 <script type="text/javascript" src="./javascript/scripts.js"></script>
                 </Helmet> */}
-        <NavBar/>
+        <NavBar
+          setUser={this.setTheUser}
+          userInSession={this.state.loggedInUser}
+        />
         <Switch>
           <Route
             path="/signup"
