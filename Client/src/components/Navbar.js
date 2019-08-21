@@ -37,7 +37,7 @@ class NavBar extends Component {
                             <ul>
                                 <li><Link to="/">Inicio</Link></li>
                                 <li><Link to="/competitions">Concursos actuales</Link></li>
-                                <li><Link to="/portfolio">Portfolio</Link></li>
+                                <li><Link to="/portfolios">Portfolios</Link></li>
                                 <li><div onClick={this.logout}>Cerrar sesión</div></li>
                                 <li><small>Bienvenid@, {saludo}</small></li>
                             </ul>
@@ -55,7 +55,7 @@ class NavBar extends Component {
                             <ul>
                                 <li><Link to="/">Inicio</Link></li>
                                 <li><Link to="/competitions">Concursos actuales</Link></li>
-                                <li><Link to="/portfolio">Portfolio</Link></li>
+                                <li><Link to="/portfolios">Portfolios</Link></li>
                                 <li><Link to="/signup">Registro</Link></li>
                                 <li><Link to="/login">Inicio de sesión</Link></li>
                                 <li><small>Bienvenid@, {saludo}</small></li>

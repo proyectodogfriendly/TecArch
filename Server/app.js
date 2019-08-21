@@ -8,12 +8,15 @@ const hbs = require("hbs");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
+const cors = require("cors");
+
 
 const session = require("express-session");
 const passport = require("passport");
 
 require("./configs/mongoose.config");
 require("./configs/passport.config");
+
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
@@ -78,5 +81,6 @@ app.use("/", index);
 app.use("/api", require("./routes/competition.routes"));
 app.use("/api", require("./routes/auth.routes"));
 app.use("/api", require("./routes/proposal.routes"));
+app.use("/api", require("./routes/portfolio.routes"));
 
 module.exports = app;

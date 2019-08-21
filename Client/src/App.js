@@ -10,6 +10,10 @@ import Login from "./components/auth/Login";
 import CompetitionList from "./components/Competition-list";
 import ProposalList from "./components/Proposal-list";
 import ProposalDetail from "./components/ProposalDetail";
+import ProfileArq from "./components/ProfileArq";
+
+import PortfolioList from "./components/Portfolio-list";
+import PortfolioDetail from "./components/PortfolioDetail";
 
 import NavBar from "./components/Navbar";
 
@@ -65,6 +69,9 @@ class App extends Component {
           <Route path="/competitions" exact component={CompetitionList} />
           <Route path="/proposals" exact component={ProposalList} />
           <Route path="/proposals/:id" exact component={ProposalDetail} />
+          <Route path="/portfolios" exact component={PortfolioList} />
+          <Route path="/portfolios/:id" exact component={PortfolioDetail} />
+          <Route path="/profile" exact component={ProfileArq} />
         </Switch>
       </>
     );
