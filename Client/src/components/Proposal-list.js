@@ -32,9 +32,6 @@ class ProposalList extends Component {
             
     }
 
-   
-
-
 
     render() {
 

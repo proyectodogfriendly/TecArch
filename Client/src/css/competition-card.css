@@ -1,0 +1,267 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200|Questrial&display=swap');
+
+/* 			font-family: 'Questrial', sans-serif;
+			font-family: 'Poppins', sans-serif; 
+*/
+
+.img-competition{
+    width: 100%;
+
+}
+
+
+.compet-card{
+    background-color: transparent; 
+    margin-bottom:20px; 
+}
+
+.titulo-h4{
+    color:#262626;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.6em;
+}
+
+.titulo-h3{
+    color:#262626;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.texto-p{
+    color:#363636;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/*--------------------SECTION PROYECTO 1 -----------------*/
+
+
+.caja{
+	position: relative;
+	top:250px;
+}
+
+
+.pr-title{
+	float:left;
+	font-size:24px;
+	text-align:left;
+	font-family: 'Questrial', sans-serif;
+	font-weight: 700;
+	position:relative;
+	padding-left:40px;
+	padding-right:20px;
+}
+.pr-title span {
+	float:left;
+	width:100%;
+	padding-top:10px;
+	color:#999;
+	text-align:left;
+	font-size:10px;
+	text-transform:uppercase;
+	font-weight:500;
+	line-height:22px;
+}
+.pr-title:before  {
+	content:'';
+	position:absolute;
+	left:0;
+	width:6px;
+	height:120px;
+	
+	background:#292929;
+	top:50%;
+	margin-top:-60px;
+}
+.parallax-item {
+	margin:50px 0;}
+
+.parallax-item  img{
+	width:100%;
+	height:auto;
+	opacity:0.7;
+}
+.parallax-text {
+	position:absolute;
+	bottom:40%;
+	z-index:10;
+}
+.parallax-text.right-pos {
+	right:-150px;
+}
+.parallax-text.left-pos {
+	left:-150px;
+}
+.fl-wrap {
+	float:left;
+	width:100%;
+	position:relative;
+}
+.parallax-header ul {
+	float:right;
+	position:relative;
+	top:2px;
+	border-left:1px solid #ccc;
+	padding:10px 0 10px 30px;
+	list-style: none;
+}
+.parallax-header ul li {
+	float:left;
+	padding-left:15px;
+	text-align:left;
+	font-family: 'Questrial', sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	list-style: none;
+}
+.parallax-header ul li a{
+	color: #000;
+	text-decoration: none;
+	list-style: none;
+}
+
+.parallax-text h3:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    width: 60px;
+    height: 6px;
+    left: 0;
+    background: #292929;
+}
+.parallax-text h3 a {
+    position: relative;
+    z-index: 10;
+}
+
+.parallax-item {
+	margin:50px 0;}
+
+.parallax-item  img{
+	width:100%;
+	height:auto;
+	opacity:0.7;
+}
+.parallax-text {
+	position:absolute;
+	bottom:40%;
+	z-index:10;
+}
+.parallax-text.right-pos {
+	right:-150px;
+}
+.parallax-text.left-pos {
+	left:-150px;
+}
+.parallax-text h3 {
+	font-size:44px;
+	font-weight:bold;
+	font-family: 'Questrial', sans-serif;
+	position:relative;
+}
+.parallax-text h3:before {
+	content:'';
+	position:absolute;
+	top:-40px;
+	width:60px;
+	height:6px;
+	left:0;
+	background:#292929;
+}
+.parallax-text h3:after {
+	content:'';
+	position:absolute;
+	top:-5px;
+	bottom:-10px;
+	width:1px;
+ 	-webkit-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+	right:-100px;
+	background:#ccc;
+	z-index:1;
+}
+.parallax-text h3:hover:after{
+	width:140%;
+	opacity:0.4;
+}
+.parallax-text h3 a {
+	position:relative;
+	z-index:10;
+	color: #292929;
+	text-decoration: none;
+}
+.parallax-text.left-pos h3   {
+	text-align:left  ;
+}
+.parallax-text.right-pos h3   {
+	text-align:right  ;
+}
+.parallax-text h4 {
+	text-align:left;
+	color:#292929;
+	padding:15px 0;
+}
+
+.float-btn {
+    float: left;
+}
+.flat-btn {
+    border: 1px solid #000;
+    color: #fff;
+	background: #292929;
+	
+}
+.btn {
+    padding: 15px 30px;
+    position: relative;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+    text-transform: uppercase;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    height: 1px;
+    width: 0;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.btn-tecarch{
+    background-color: #262626;
+    color: #f5f5f5;
+    margin-right: 10px; 
+}
+.btn-tecarch:hover{
+    background-color: #262626;
+    color: #ffffff;
+    margin-right: 10px; 
+}
+.section1{
+	margin-top: 180px;
+}
+
+.section2A{
+	margin-top: 0px;
+	padding-top: 120px;
+	border:1px solid red;
+}
+
+.section2B{
+	margin-top: 0px;
+	border:1px solid GREEN;
+}

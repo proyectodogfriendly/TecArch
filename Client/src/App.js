@@ -11,6 +11,7 @@ import CompetitionList from "./components/Competition-list";
 import ProposalList from "./components/Proposal-list";
 import ProposalDetail from "./components/ProposalDetail";
 import ProfileArq from "./components/ProfileArq";
+import CanvasBack from "./components/CanvasBack"
 
 import PortfolioList from "./components/Portfolio-list";
 import PortfolioDetail from "./components/PortfolioDetail";
@@ -46,14 +47,6 @@ class App extends Component {
   render() {
     return (
       <>
-       {/* <Helmet>
-                <title>My App</title>
-                <meta charSet="utf-8" />
-                <meta name="description" content="A React.js application" />
-                <script type="text/javascript" src="./javascript/jquery.min.js"></script>
-                <script type="text/javascript" src="./javascript/plugins.js"></script>
-                <script type="text/javascript" src="./javascript/scripts.js"></script>
-                </Helmet> */}
         <NavBar/>
         <Switch>
           <Route
