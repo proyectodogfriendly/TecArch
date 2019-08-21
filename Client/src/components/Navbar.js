@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-// import AuthServices from '../services/auth.services'
+import AuthServices from "../services/auth.services";
 
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    // this.authServices = new AuthServices()
+    this.authServices = new AuthServices();
   }
 
   toggleMenu = () =>
@@ -85,6 +85,11 @@ class NavBar extends Component {
                 </li>
                 <li>
                   <Link to="/login">Inicio de sesión</Link>
+                </li>
+                <li>
+                  <Link to="/" onClick={this.logout}>
+                    Cerrar
+                  </Link>
                 </li>
                 <li>
                   <small>Bienvenid@, {saludo}</small>
