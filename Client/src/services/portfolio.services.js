@@ -5,10 +5,11 @@ export default class Services {
            baseURL: 'http://localhost:5000/api/'
        })
    }
-   getAllCompetitions = () => {
-    return this.service.get('getAllCompetitions')
+   getAllPortfolios = () => {
+    return this.service.get('getAllPortfolios')
    }
-   getOneCompetition = id => this.service.get(`getOneCompetition/${id}`)
-   postCompetition = theNewCompetition => this.service.post(`postCompetition`, theNewCompetition)
+   getOnePortfolio = id => this.service.get(`getOnePortfolio/${id}`)
+   postPortfolio = theNewPortfolio=> this.service.post(`postPortfolio`, theNewPortfolio)
+
 //    handleUpload = theFile => this.service.post('/upload', theFile)
 }

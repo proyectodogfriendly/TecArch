@@ -79,5 +79,6 @@ app.use("/", index);
 app.use("/api", require("./routes/competition.routes"));
 app.use("/api", require("./routes/auth.routes"));
 app.use("/api", require("./routes/proposal.routes"));
+app.use("/api", require("./routes/portfolio.routes"));
 
 module.exports = app;

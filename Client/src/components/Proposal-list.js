@@ -9,6 +9,8 @@ import '../css/proposal-card.css'
 // import '../javascript/jquery.min.js'
 // import '../javascript/scripts.js'
 
+
+
 // import $ from 'jquery';
 
 class ProposalList extends Component {
@@ -41,10 +43,9 @@ class ProposalList extends Component {
         return (
             <>
                 <div className="container">
-                    <div className="partcile-dec" data-parcount="70">
-                        <canvas className="myCanvas">   
-                        </canvas>
-                    </div> 
+
+               
+
                     <h1>Listado de propuestas para el concurso </h1>
 
                     <div className="row proposal-list">
