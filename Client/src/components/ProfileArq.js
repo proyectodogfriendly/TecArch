@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import React, { Component } from "react";
 
 import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
@@ -17,8 +19,6 @@ class ProfileArq extends Component {
         // this.services = new Services()
     }
 
-   
-    
 
     render(){
         const BasicRows = () => <Gallery photos={photos} />
@@ -28,10 +28,10 @@ class ProfileArq extends Component {
             <BasicRows/>
         </div>
 
-        <div className="container">
+          <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                <article className="card-arquitecto">
+                  <article className="card-arquitecto">
                     <h4>Bienvenido a TecArch</h4>
                     <p>
                     Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. 
@@ -43,18 +43,16 @@ class ProfileArq extends Component {
                 </article>
                 </div>
                 <div className="col-md-4">
-                <img className="imagen" src="../img/2.jpg" alt="img"/>
+                  <img className="imagen" src="../img/2.jpg" alt="img"/>
             
                 </div>    
 
             </div>
-        </div>
-    
-    </>
-        
-    )
-}
+          </div>
+       
+      </>
+    );
+  }
 }
 
-export default ProfileArq
-
+export default ProfileArq;

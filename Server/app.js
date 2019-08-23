@@ -82,5 +82,6 @@ app.use("/api", require("./routes/competition.routes"));
 app.use("/api", require("./routes/auth.routes"));
 app.use("/api", require("./routes/proposal.routes"));
 app.use("/api", require("./routes/portfolio.routes"));
+app.use("/api", require("./routes/file-upload.routes"));
 
 module.exports = app;

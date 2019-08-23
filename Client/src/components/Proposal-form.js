@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import Services from "../services/portfolio.services";
+import Services from "../services/proposal.services";
 
-class PortfolioForm extends Component {
+class ProposalForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       nameArchitect: "",
-      nameStudio: "",
-      address: "",
-      mail: "",
-      phone: "",
-      description: "",
-      imageUrl: []
+      imageUrl: "",
+      title: "",
+      category: "",
+      description: ""
     };
     this.service = new Services();
   }
@@ -25,10 +23,10 @@ class PortfolioForm extends Component {
     e.preventDefault();
     console.log(this.state);
     this.service
-      .postPortfolio(this.state)
+      .postProposal(this.state)
       .then(x => {
         this.props.closeModal();
-        this.props.updatePortfolioList();
+        this.props.updateProposalList();
         // this.props.showToast();
       })
       .catch(err => console.log("error", err));
@@ -53,7 +51,7 @@ class PortfolioForm extends Component {
   render() {
     return (
       <>
-        <h4>Crear un nuevo portfolio</h4>
+        <h4>Crear una nueva propuesta</h4>
 
         <hr />
 
@@ -69,49 +67,27 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-nameStudio">Estudio de arquitectura</label>
+            <label htmlFor="input-title">Título</label>
             <input
-              name="nameStudio"
+              name="title"
               type="text"
               className="form-control"
-              id="input-nameStudio"
+              id="input-title"
               onChange={this.handleChangeInput}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-address">Dirección</label>
+            <label htmlFor="input-category">Categoria</label>
             <input
-              name="address"
+              name="category"
               type="text"
               className="form-control"
-              id="input-address"
+              id="input-category"
               onChange={this.handleChangeInput}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-mail">Email</label>
-            <input
-              name="mail"
-              type="text"
-              className="form-control"
-              id="input-mail"
-              onChange={this.handleChangeInput}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="input-phone">Phone</label>
-            <input
-              name="phone"
-              type="number"
-              className="form-control"
-              id="input-phone"
-              onChange={this.handleChangeInput}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="input-description">
-              Describe lo que diferencia tu actividad
-            </label>
+            <label htmlFor="input-mail">Description</label>
             <input
               name="description"
               type="text"
@@ -121,7 +97,9 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-img">Añade tus principales proyectos</label>
+            <label htmlFor="input-img">
+              Añade las imágenes de tu propuesta
+            </label>
             <input
               name="imageUrl"
               type="file"
@@ -147,4 +125,4 @@ class PortfolioForm extends Component {
   }
 }
 
-export default PortfolioForm;
+export default ProposalForm;

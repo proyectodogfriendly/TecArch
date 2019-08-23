@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const competitionSchema = new Schema(
   {
-    imageUrl: { type: String, require: true },
+    imageUrl: String,
     title: { type: String, require: true },
     category: { type: String, require: true },
     description: { type: String, require: true },
