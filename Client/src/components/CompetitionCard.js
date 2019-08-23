@@ -1,27 +1,44 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// import '../styles/competition-card.css'
+import '../css/competition-card.css'
 
 
 const CompetitionCard = ({ title, address, adjudicator, category,  imageUrl, _id, state, amount, conditions,description }) => {
 
     return (
-        <div className="col-md-9">
-            <article className="coaster-card">
-                <h4>{title}</h4>
-                <h4>{address}</h4>
-                <h4>{adjudicator}</h4>
-                <h4>{category}</h4>
-                <img src={imageUrl} alt={title} />
-                <h4>{state}</h4>
-                <h4>{amount}</h4>
-                <p>{conditions}</p>
-                <p>{description}</p>
-                <hr></hr>
-                <Link className="btn btn-sm btn-dark" to={`/competitions/${_id}`}>Añadir propuesta</Link>
-                <Link className="btn btn-sm btn-dark" to={`/competitions/${_id}`}>Ver propuestas</Link>
-            </article>
+        <div className="container">
+            <div className="row">
+                <div className="col-8">
+                    <article className="compet-card">
+                        <div className="pr-title">
+                            <h4 className="titulo-h4">{title}</h4>
+                            <span> 
+                                <h3 className="titulo-h3">Dirección: {address}</h3>
+                                <h3 className="titulo-h3">Adjudicación: {adjudicator}</h3>
+                                <h3 className="titulo-h3">Categoría: {category}</h3>
+                                <h3 className="titulo-h3">Estado:{state}</h3>
+                                <h3 className="titulo-h3">Presupuesto:{amount}</h3>
+                                <h3 className="titulo-h3">Condiciones: {conditions}</h3>
+                                <h3 className="titulo-h3">Descripción:</h3>
+                            </span>
+                        </div>
+                        <p className="texto-p"> {description}</p>
+                       
+                        <Link className="btn btn-sm btn-tecarch" to={`/competitions/${_id}`}>Añadir propuesta</Link>
+                        <Link className="btn btn-sm btn-tecarch" to={`/competitions/${_id}`}>Ver propuestas</Link>
+                        
+                        <hr></hr>
+                    </article>
+                </div>
+                <div className="col-4">
+                    <article className="">
+                        
+                        <img src={imageUrl} alt={title} className="img-competition"/>
+                    
+                    </article>
+                </div>
+            </div> 
         </div>
     
         

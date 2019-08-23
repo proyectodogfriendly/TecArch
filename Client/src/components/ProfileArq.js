@@ -1,10 +1,13 @@
 
 import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
-// import '../styles/competition-card.css'
+import '../css/profile-arq.css'
 
 
-import { Modal, Toast } from 'react-bootstrap'
+import Gallery from "react-photo-gallery";
+
+
+import { photos } from "../img/photos";
 
 class ProfileArq extends Component {
 
@@ -14,42 +17,25 @@ class ProfileArq extends Component {
         // this.services = new Services()
     }
 
-    // componentDidMount = () => this.updateList()
-
-    // updateList = () => {
-    //     this.services.getCoasters()
-    //         .then(response => this.setState({ competitions: response.data }))
-    //         .catch(err => console.log(err))
-    // }
-
-    handleModalOpen = () => this.setState({ showModal: true })
-    handleModalClose = () => this.setState({ showModal: false })
-    handleToastOpen = () => this.setState({ showToast: true })
-    handleToastClose = () => this.setState({ showToast: false })
-
-
+   
+    
 
     render(){
+        const BasicRows = () => <Gallery photos={photos} />
     return (
         <>
-         <br></br><br></br><br></br><br></br><br></br><br></br>
-         <div className="container">
+        <div className="container" id="fondoPerfil">
+            <BasicRows/>
+        </div>
 
-         {/* <Modal show={this.state.showModal} onHide={this.handleModalClose}>
-
-            <Modal.Body>
-                <Portfolio-form closeModal={this.handleModalClose}  showToast={this.handleToastOpen} />
-            </Modal.Body>
-
-            </Modal> */}
-
-         </div>
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                <article className="coaster-card">
+                <article className="card-arquitecto">
                     <h4>Bienvenido a TecArch</h4>
-                    
+                    <p>
+                    Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. 
+                    </p>
                     
                     <Link className="btn btn-sm btn-dark" to={`/profile`}>Crear Portfolio</Link>
                     <Link className="btn btn-sm btn-dark" to={`/profile`}>Crear Propuesta</Link>

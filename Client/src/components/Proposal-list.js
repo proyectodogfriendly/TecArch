@@ -5,13 +5,7 @@ import Services from '../services/proposal.services'
 import ProposalCard from './ProposalCard'
 import '../css/proposal-card.css'
 
-// // import '../javascript/plugins.js'
-// import '../javascript/jquery.min.js'
-// import '../javascript/scripts.js'
-
-
-
-// import $ from 'jquery';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 class ProposalList extends Component {
 
@@ -32,9 +26,6 @@ class ProposalList extends Component {
             
     }
 
-   
-
-
 
     render() {
 
@@ -44,7 +35,6 @@ class ProposalList extends Component {
             <>
                 <div className="container">
 
-               
 
                     <h1>Listado de propuestas para el concurso </h1>
 

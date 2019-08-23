@@ -71,11 +71,3 @@ class PortfolioDetail extends Component {
 
 export default PortfolioDetail;
 
-// nameArchitect: { type: String, require: true },
-//     nameStudio: { type: String, require: true },
-//     imageUrl: { type: String, require: true },//array
-//     address: { type: String, require: true },
-//     mail: { type: String, require: true },
-//     phone: { type: Number, require: true },
-//     description: { type: String, require: true },
-

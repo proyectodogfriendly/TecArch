@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import '../css/navbar.css'
 
 import AuthServices from "../services/auth.services";
 
