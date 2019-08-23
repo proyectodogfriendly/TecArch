@@ -5,11 +5,11 @@ const portfolioSchema = new Schema(
   {
     nameArchitect: { type: String, require: true },
     nameStudio: { type: String, require: true },
-    imageUrl: { type: String, require: true },//array
+    imageUrl: [String], //array
     address: { type: String, require: true },
     mail: { type: String, require: true },
     phone: { type: Number, require: true },
-    description: { type: String, require: true },
+    description: { type: String, require: true }
   },
   {
     timestamps: true

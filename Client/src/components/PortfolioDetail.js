@@ -21,7 +21,7 @@ class PortfolioDetail extends Component {
   render() {
     return (
       <div className="container">
-        <article className="coaster-detail">
+        <article className="portfolio-detail">
           <div className="row justify-content-center">
             <div className="col-md-6">
               <h1>Detalles de {this.state.Portfolio.title}</h1>
@@ -35,21 +35,17 @@ class PortfolioDetail extends Component {
                 {this.state.Portfolio.nameStudio}
               </p>
               <p>
-                <strong>Imágenes:</strong>{" "}
-                {this.state.Portfolio.imageUrl}
+                <strong>Imágenes:</strong> {this.state.Portfolio.imageUrl}
               </p>
               <p>
-                <strong>Dirección:</strong>{" "}
-                {this.state.Portfolio.address}
+                <strong>Dirección:</strong> {this.state.Portfolio.address}
               </p>
 
               <p>
-                <strong>Mail:</strong>{" "}
-                {this.state.Portfolio.mail}
+                <strong>Mail:</strong> {this.state.Portfolio.mail}
               </p>
               <p>
-                <strong>Teléfono:</strong>{" "}
-                {this.state.Portfolio.phone}
+                <strong>Teléfono:</strong> {this.state.Portfolio.phone}
               </p>
               <p>
                 <strong>Descripción del arquitecto:</strong>{" "}
@@ -61,7 +57,6 @@ class PortfolioDetail extends Component {
                 Volver a portfolios
               </Link>
             </div>
-            
           </div>
         </article>
       </div>
@@ -70,12 +65,3 @@ class PortfolioDetail extends Component {
 }
 
 export default PortfolioDetail;
-
-// nameArchitect: { type: String, require: true },
-//     nameStudio: { type: String, require: true },
-//     imageUrl: { type: String, require: true },//array
-//     address: { type: String, require: true },
-//     mail: { type: String, require: true },
-//     phone: { type: Number, require: true },
-//     description: { type: String, require: true },
-
