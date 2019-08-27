@@ -35,6 +35,15 @@ class Login extends Component {
   render() {
     return (
       <div className="container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <h1>Inicio de sesión de usuario</h1>
         <form onSubmit={this.handleFormSubmit}>
           Usuario:{" "}

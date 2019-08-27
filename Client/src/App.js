@@ -11,7 +11,7 @@ import CompetitionList from "./components/Competition-list";
 import ProposalList from "./components/Proposal-list";
 import ProposalDetail from "./components/ProposalDetail";
 import ProfileArq from "./components/ProfileArq";
-import CanvasBack from "./components/CanvasBack"
+import CanvasBack from "./components/CanvasBack";
 
 import PortfolioList from "./components/Portfolio-list";
 import PortfolioDetail from "./components/PortfolioDetail";
@@ -20,8 +20,6 @@ import Footer from "./components/Footer";
 
 import NavBar from "./components/Navbar";
 import Inicio from "./components/Inicio";
-
-
 
 class App extends Component {
   constructor() {
@@ -48,11 +46,15 @@ class App extends Component {
   };
 
   render() {
+    this.fetchUser();
     return (
       <>
-        <NavBar/>
+        <NavBar
+          userInSession={this.state.loggedInUser}
+          setUser={this.setTheUser}
+        />
         <Switch>
-        <Route
+          <Route
             path="/"
             exact
             render={match => <Inicio {...match} setUser={this.setTheUser} />}
@@ -72,11 +74,15 @@ class App extends Component {
           <Route path="/proposals/:id" exact component={ProposalDetail} />
           <Route path="/portfolios" exact component={PortfolioList} />
           <Route path="/portfolios/:id" exact component={PortfolioDetail} />
-          <Route path="/profile" exact component={ProfileArq} />
+          <Route
+            path="/profile"
+            exact
+            render={() => (
+              <ProfileArq userInSession={this.state.loggedInUser} />
+            )}
+          />
         </Switch>
-        <Footer></Footer>
-            
-           
+        <Footer />
       </>
     );
   }

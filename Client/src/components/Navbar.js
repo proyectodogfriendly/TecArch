@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import '../css/navbar.css'
+import "../css/navbar.css";
 
 import AuthServices from "../services/auth.services";
 
@@ -24,6 +24,7 @@ class NavBar extends Component {
   };
 
   render() {
+    console.log(this.props.userInSession);
     const saludo = this.props.userInSession
       ? this.props.userInSession.data.username
       : "invitado";
@@ -49,9 +50,7 @@ class NavBar extends Component {
                   <Link to="/portfolios">Portfolios</Link>
                 </li>
                 <li>
-                  <Link to="/" onClick={this.logout}>
-                    Cerrar sesión
-                  </Link>
+                  <button onClick={this.logout}>Cerrar sesión</button>
                 </li>
                 <li>
                   <small>Bienvenid@, {saludo}</small>
@@ -87,11 +86,11 @@ class NavBar extends Component {
                 <li>
                   <Link to="/login">Inicio de sesión</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/" onClick={this.logout}>
                     Cerrar
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <small>Bienvenid@, {saludo}</small>
                 </li>
