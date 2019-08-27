@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Services from "../services/proposal.services";
+import '../css/proposal-form.css'
 
 class ProposalForm extends Component {
   constructor(props) {
@@ -51,13 +52,10 @@ class ProposalForm extends Component {
   render() {
     return (
       <>
-        <h4>Crear una nueva propuesta</h4>
 
-        <hr />
-
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={this.handleFormSubmit} id="portfolio" className="fade-in">
           <div className="form-group">
-            <label htmlFor="input-nameArchitect">Nombre</label>
+            <label className="label-txt" htmlFor="input-nameArchitect">Nombre</label>
             <input
               name="nameArchitect"
               type="text"
@@ -67,7 +65,7 @@ class ProposalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-title">Título</label>
+            <label className="label-txt" htmlFor="input-title">Título</label>
             <input
               name="title"
               type="text"
@@ -77,7 +75,7 @@ class ProposalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-category">Categoria</label>
+            <label className="label-txt" htmlFor="input-category">Categoria</label>
             <input
               name="category"
               type="text"
@@ -87,7 +85,7 @@ class ProposalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-mail">Description</label>
+            <label className="label-txt" htmlFor="input-mail">Description</label>
             <input
               name="description"
               type="text"
@@ -97,7 +95,7 @@ class ProposalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-img">
+            <label className="label-txt" htmlFor="input-img">
               Añade las imágenes de tu propuesta
             </label>
             <input

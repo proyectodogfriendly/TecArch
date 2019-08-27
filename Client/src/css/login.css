@@ -1,0 +1,126 @@
+#fondoLogin {
+    width: 100vw;
+    height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: url(../img/fondo-3.png) center center;
+	background-size: cover;
+  }
+.fondoPerfilBlur{
+    filter: blur(4px);
+}
+.card-arquitecto{
+    top:10vh;
+    z-index: 2;
+}
+.form-control2{
+	background-color: #fff;
+    border-radius: 0px;
+    width:65%;
+}
+input:-internal-autofill-selected {
+    background-color: #f6f6f6 !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.pr-title2{
+    float:left;
+    font-size:22px;
+    text-align:left;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 700;
+    position:relative;
+    padding-left:40px;
+    padding-right:20px;
+    margin-top: 50px;
+}
+
+.pr-title2 span {
+	float: left;
+    width: 100%;
+    padding-top: 10px;
+    color: #262626;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.pr-title2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 80px;
+    background: #262626;
+    top: 3vh;
+    margin-top: 2px;
+}
+
+.btn-tecarch{
+    background-color: #262626;
+    color: #f5f5f5;
+	margin-right: 10px; 
+	margin-left: 40px;
+    transition: all 200ms linear;
+    margin-top: 150px;
+}
+.btn-tecarch:hover{
+    background-color: #363636;
+    color: #ffffff;
+	margin-right: 10px; 
+	transition: all 200ms linear;
+}
+
+
+.texto{
+	float:left;
+	font-size:22px;
+	text-align:left;
+	font-family: 'Questrial', sans-serif;
+	font-weight: 700;
+	position:relative;
+	padding-left:40px;
+	padding-right:20px;
+	margin-top: 50px;
+}
+.titulo-h4{
+    color:#262626;
+    font-family: 'Questrial', sans-serif;
+	font-size: 1em;
+	margin-top: 0px;
+}
+
+.label-txt{
+	float: left;
+    width: 100%;
+    color: #262626;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 18px;
+}
+.form-control{
+	background-color: #fff;
+	border-radius: 0px;
+}
+.btn-tecarch2{
+    background-color: #262626;
+    color: #f5f5f5;
+	margin-right: 0px; 
+	margin-left: 0px;
+	transition: all 200ms linear;
+}
+.btn-tecarch2:hover{
+    background-color: #363636;
+    color: #ffffff;
+	margin-right: 0px; 
+	transition: all 200ms linear;
+}
+
+#formu{
+    margin-top:30vh;
+}

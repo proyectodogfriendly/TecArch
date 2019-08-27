@@ -20,7 +20,7 @@ import Footer from "./components/Footer";
 
 import NavBar from "./components/Navbar";
 import Inicio from "./components/Inicio";
-
+import MyComponent from "./components/Vivus";
 
 
 class App extends Component {
@@ -50,23 +50,39 @@ class App extends Component {
   render() {
     return (
       <>
+        {/* <div className="ini">
+          
+          <MyComponent className="ini2"></MyComponent>
+        </div> */}
+    
         <NavBar/>
+        
         <Switch>
         <Route
             path="/"
             exact
-            render={match => <Inicio {...match} setUser={this.setTheUser} />}
-          />
+            render={match => <Inicio className="casa-perps" {...match} setUser={this.setTheUser} />}
+            />
+        <Route
+            path="/"
+            exact
+            render={match => <Inicio className="casa-perps" {...match} setUser={this.setTheUser} />}
+            />
+        <Route
+            path="/"
+            exact
+            render={match => <Inicio className="casa-perps" {...match} setUser={this.setTheUser} />}
+            />
           <Route
             path="/signup"
             exact
             render={match => <Signup {...match} setUser={this.setTheUser} />}
-          />
+            />
           <Route
             path="/login"
             exact
             render={match => <Login {...match} setUser={this.setTheUser} />}
-          />
+            />
           <Route path="/competitions" exact component={CompetitionList} />
           <Route path="/proposals" exact component={ProposalList} />
           <Route path="/proposals/:id" exact component={ProposalDetail} />
@@ -74,10 +90,10 @@ class App extends Component {
           <Route path="/portfolios/:id" exact component={PortfolioDetail} />
           <Route path="/profile" exact component={ProfileArq} />
         </Switch>
+       
         <Footer></Footer>
-            
-           
-      </>
+     
+            </>
     );
   }
 }

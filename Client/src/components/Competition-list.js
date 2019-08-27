@@ -155,7 +155,7 @@ class CompetitionList extends Component {
                     }} />
               </div>
                   <div className="container titulo">
-                      <h1>Listado de concursos de arquitetura </h1>
+                      <h1 className="titulo-competition">Listado de concursos de arquitetura </h1>
                   </div>
 
                    

@@ -1,54 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import '../styles/competition-card.css'
+import '../css/portfolio-card.css'
 
-const PortfolioCard = ({
-  nameArchitect,
-  nameStudio,
-  imageUrl,
-  address,
-  mail,
-  phone,
-  description,
-  _id
-}) => {
-  return (
-    <div className="col-md-9">
-      <article className="coaster-card">
-        <h4>{nameArchitect}</h4>
-        <h4>{nameStudio}</h4>
-        <img src={imageUrl} alt={""} />
-        <h4>{address}</h4>
-        <h4>{mail}</h4>
-        <p>{phone}</p>
-        <p>{description}</p>
-        <Link className="btn btn-sm btn-dark" to={`/portfolios/${_id}`}>
-          Ver detalles
-        </Link>
-        <hr />
-      </article>
-    </div>
-  );
-};
 
 const PortfolioCard = ({ nameArchitect, nameStudio, imageUrl, address, mail, phone, description, _id }) => {
 
     return (
-        <div className="col-md-3">
-            <article className="coaster-card">
-                <h4 className="texto-h4">{nameArchitect}</h4>
-                <h4>{nameStudio}</h4>
-                <img className="img-portfolio" src={imageUrl} alt={""} />
-                <h4>{address}</h4>
-                <h4>{mail}</h4>
-                <p>{phone}</p>
-                <p>{description}</p>
-                <Link className="btn btn-sm btn-te" to={`/portfolios/${_id}`}>Ver detalles</Link>
-            </article>
+       
+        <div className="col-md-4 flip-card">
+                <div className="flip-card-inner">
+                    <Link className="enlace" to={`/portfolios/${_id}`}>
+                        <div className="flip-card-front">
+                            <img className="img-card" src={imageUrl} alt={""} />
+                        {/* <h4 className="nombreArq">{nameArchitect}</h4>  */}
+                        {/* <h4>{address}</h4>
+                        <p>{phone}</p> */}
+
+                        </div>
+                    </Link>
+                </div>
         </div>
-    
-        
+       
     )
 }
 

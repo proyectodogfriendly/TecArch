@@ -31,9 +31,9 @@
 	float:left;
 	width:100%;
 	padding-top:10px;
-	color:#999;
+	color:#262626;
 	text-align:left;
-	font-size:10px;
+	font-size:13px;
 	text-transform:uppercase;
 	font-weight:500;
 	line-height:22px;
@@ -70,7 +70,7 @@
 	padding-left:40px;
 	padding-right:20px;
 	padding-top: 20px;
-	text-align:justify;
+	text-align:left;
 }
 
 /*--------------------SECTION PROYECTO 1 -----------------*/
@@ -106,14 +106,14 @@
     -ms-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.btn-tecarch{
+.btn-tecarch5{
     background-color: #262626;
     color: #f5f5f5;
 	margin-right: 10px; 
 	margin-left: 40px;
 	transition: all 200ms linear;
 }
-.btn-tecarch:hover{
+.btn-tecarch5:hover{
     background-color: #363636;
     color: #ffffff;
 	margin-right: 10px; 

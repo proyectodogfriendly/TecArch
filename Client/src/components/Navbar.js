@@ -36,7 +36,7 @@ class NavBar extends Component {
             &equiv;{" "}
           </div>
           <header className="menu">
-            <h1>TecArch </h1>
+            <img src="../logo-tec.png"/>
             <nav>
               <ul>
                 <li>
@@ -69,7 +69,7 @@ class NavBar extends Component {
             &equiv;{" "}
           </div>
           <header className="menu">
-            <h1>TecArch</h1>
+          <Link to="/"><img src="../img/logo-tec.png"/></Link>
             <nav>
               <ul>
                 <li>
