@@ -9,7 +9,9 @@ const ProposalCard = ({ nameArchitect, imageUrl, title, category, _id ,descripti
     return (
         <div className="col-md-9">
             <article className="coaster-card">
-                <h4>{nameArchitect}</h4>
+                <br></br><br></br><br></br><br></br><br></br>
+                
+                <h4>hhhh{nameArchitect}</h4>
                 <img src={imageUrl} alt={title} />
                 <h4>{title}</h4>
                 <h4>{category}</h4>

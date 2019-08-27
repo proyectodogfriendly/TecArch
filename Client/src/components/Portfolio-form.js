@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Services from "../services/portfolio.services";
+import "../css/portfolio-form.css";
 
 class PortfolioForm extends Component {
   constructor(props) {
@@ -53,13 +54,17 @@ class PortfolioForm extends Component {
   render() {
     return (
       <>
-        <h4>Crear un nuevo portfolio</h4>
+        {/* <h4 className="texto">Crear un nuevo portfolio</h4> */}
 
-        <hr />
-
-        <form onSubmit={this.handleFormSubmit}>
+        <form
+          onSubmit={this.handleFormSubmit}
+          id="portfolio"
+          className="fade-in"
+        >
           <div className="form-group">
-            <label htmlFor="input-nameArchitect">Nombre</label>
+            <label className="label-txt" htmlFor="input-nameArchitect">
+              Nombre
+            </label>
             <input
               name="nameArchitect"
               type="text"
@@ -69,7 +74,9 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-nameStudio">Estudio de arquitectura</label>
+            <label className="label-txt" htmlFor="input-nameStudio">
+              Estudio de arquitectura
+            </label>
             <input
               name="nameStudio"
               type="text"
@@ -79,7 +86,9 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-address">Dirección</label>
+            <label className="label-txt" htmlFor="input-address">
+              Dirección
+            </label>
             <input
               name="address"
               type="text"
@@ -89,7 +98,9 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-mail">Email</label>
+            <label className="label-txt" htmlFor="input-mail">
+              Email
+            </label>
             <input
               name="mail"
               type="text"
@@ -99,7 +110,9 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-phone">Phone</label>
+            <label className="label-txt" htmlFor="input-phone">
+              Phone
+            </label>
             <input
               name="phone"
               type="number"
@@ -109,7 +122,7 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-description">
+            <label className="label-txt" htmlFor="input-description">
               Describe lo que diferencia tu actividad
             </label>
             <input
@@ -121,7 +134,9 @@ class PortfolioForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="input-img">Añade tus principales proyectos</label>
+            <label className="label-txt" htmlFor="input-img">
+              Añade tus principales proyectos
+            </label>
             <input
               name="imageUrl"
               type="file"
@@ -132,7 +147,7 @@ class PortfolioForm extends Component {
             />
           </div>
 
-          <button type="submit" className="btn btn-dark btn-sm">
+          <button type="submit" className="btn btn-tecarch2">
             Crear
           </button>
           {/* <button

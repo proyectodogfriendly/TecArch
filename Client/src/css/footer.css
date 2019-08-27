@@ -79,3 +79,25 @@
 .footer-social img{
 	width:15px;
 }
+
+
+/* .ini{
+    top:65px;
+    position: relative;
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 45vw;
+    border:2pc solid green;
+} */
+
+.ini2{
+    background-color: blue;
+}
+
+.casa-perps{
+    background-color: green;
+    position:relative;
+    /* top:100px; */
+    
+}

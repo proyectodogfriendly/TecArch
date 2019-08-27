@@ -24,7 +24,7 @@ const CompetitionCard = ({
               <h4 className="titulo-h4">{title}</h4>
               <span>
                 <h3 className="titulo-h3">Dirección: {address}</h3>
-                <h3 className="titulo-h3">Adjudicación: {adjudicator}</h3>
+                <h3 className="titulo-h3">Adjudicatario: {adjudicator}</h3>
                 <h3 className="titulo-h3">Categoría: {category}</h3>
                 <h3 className="titulo-h3">Estado:{state}</h3>
                 <h3 className="titulo-h3">Presupuesto:{amount}</h3>
@@ -34,10 +34,10 @@ const CompetitionCard = ({
             </div>
             <p className="texto-p"> {description}</p>
 
-            <Link className="btn btn-sm btn-tecarch" to={`/login`}>
+            <Link className="btn btn-sm btn-tecarch5" to={`/login`}>
               Añadir propuesta
             </Link>
-            <Link className="btn btn-sm btn-tecarch" to={`/proposals`}>
+            <Link className="btn btn-sm btn-tecarch5" to={`/proposals`}>
               Ver propuestas
             </Link>
 

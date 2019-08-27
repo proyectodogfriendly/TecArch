@@ -1,26 +1,24 @@
 .titulo{
-    font-family: 'Questrial', sans-serif;
-    color:#262626;
-    font-size:2em;
-    position: relative;
-    top: 100px;
-    left:20px;
-  }
-
-  .fondo-portfolio{
-    z-index: 100;
-    background-color: transparent;
-    position: relative;
-    top: 150px;
-    margin-bottom: 10px;
+  font-family: 'Questrial', sans-serif;
+  color:#262626;
+  font-size:2em;
+  position: relative;
+  top: 100px;
+  left:20px;
 }
 
-.img-portfolio{
-  width: 100%;
-  opacity: 0.7;
-  object-fit: cover;
-  object-position: center;
-  height: 150px;
+.fondo-portfolio{
+  z-index: 100;
+  background-color: transparent;
+  position: relative;
+  top: 150px;
+  margin-bottom: 10px;
+  
+}
+
+.portfolio-list{
+  display: flex;
+  justify-content: center;
 }
 .btn-tecarch{
   background-color: #262626;

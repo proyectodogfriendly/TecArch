@@ -29,7 +29,9 @@ class ProposalList extends Component {
     return (
       <>
         <div className="container">
-          <h1>Listado de propuestas para el concurso </h1>
+          <h1 className="titulo-proposal">
+            Listado de propuestas para el concurso{" "}
+          </h1>
 
           <div className="row proposal-list">
             {this.state.proposals.map(proposal => (

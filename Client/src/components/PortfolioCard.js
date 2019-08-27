@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import '../styles/competition-card.css'
+import "../css/portfolio-card.css";
 
 const PortfolioCard = ({
   nameArchitect,
@@ -14,19 +14,17 @@ const PortfolioCard = ({
   _id
 }) => {
   return (
-    <div className="col-md-3">
-      <article className="coaster-card">
-        <h4 className="texto-h4">{nameArchitect}</h4>
-        <h4>{nameStudio}</h4>
-        <img className="img-portfolio" src={imageUrl} alt={""} />
-        <h4>{address}</h4>
-        <h4>{mail}</h4>
-        <p>{phone}</p>
-        <p>{description}</p>
-        <Link className="btn btn-sm btn-te" to={`/portfolios/${_id}`}>
-          Ver detalles
+    <div className="col-md-4 flip-card">
+      <div className="flip-card-inner">
+        <Link className="enlace" to={`/portfolios/${_id}`}>
+          <div className="flip-card-front">
+            <img className="img-card" src={imageUrl} alt={""} />
+            {/* <h4 className="nombreArq">{nameArchitect}</h4>  */}
+            {/* <h4>{address}</h4>
+                        <p>{phone}</p> */}
+          </div>
         </Link>
-      </article>
+      </div>
     </div>
   );
 };

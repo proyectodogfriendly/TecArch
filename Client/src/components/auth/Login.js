@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import AuthServices from "../../services/auth.services";
 
+import "../../css/login.css";
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -34,36 +36,51 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="container">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+      <div className="container" id="fondoLogin">
+        <div className="row">
+          <div className="col-md-5 card-arquitecto">
+            <div className="pr-title2">
+              <h4 className="titulo-h4">Bienvenido a TecArch</h4>
 
-        <h1>Inicio de sesión de usuario</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          Usuario:{" "}
-          <input
-            name="username"
-            type="text"
-            value={this.state.username}
-            onChange={this.handleInputChange}
-          />{" "}
-          <br />
-          Contraseña:{" "}
-          <input
-            name="password"
-            type="password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-          />{" "}
-          <br />
-          <input type="submit" value="Iniciar sesión" />
-        </form>
+              <span>
+                Introduce tu mail y tu contraseña para entrar en tu perfil.
+              </span>
+            </div>
+
+            <form
+              onSubmit={this.handleFormSubmit}
+              id="formu"
+              className="fade-in"
+            >
+              <div className="form-group2">
+                <label className="label-txt"> Usuario: </label>
+                <input
+                  name="username"
+                  type="text"
+                  className="form-control"
+                  value={this.state.username}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className="form-group2">
+                <label className="label-txt">Contraseña: </label>
+                <input
+                  name="password"
+                  type="password"
+                  className="form-control"
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                />
+
+                <input
+                  type="submit"
+                  className="btn btn-tecarch2"
+                  value="Iniciar sesión"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }

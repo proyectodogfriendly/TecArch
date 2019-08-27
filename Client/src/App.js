@@ -20,6 +20,7 @@ import Footer from "./components/Footer";
 
 import NavBar from "./components/Navbar";
 import Inicio from "./components/Inicio";
+import MyComponent from "./components/Vivus";
 
 class App extends Component {
   constructor() {
@@ -57,7 +58,35 @@ class App extends Component {
           <Route
             path="/"
             exact
-            render={match => <Inicio {...match} setUser={this.setTheUser} />}
+            render={match => (
+              <Inicio
+                className="casa-perps"
+                {...match}
+                setUser={this.setTheUser}
+              />
+            )}
+          />
+          <Route
+            path="/"
+            exact
+            render={match => (
+              <Inicio
+                className="casa-perps"
+                {...match}
+                setUser={this.setTheUser}
+              />
+            )}
+          />
+          <Route
+            path="/"
+            exact
+            render={match => (
+              <Inicio
+                className="casa-perps"
+                {...match}
+                setUser={this.setTheUser}
+              />
+            )}
           />
           <Route
             path="/signup"
