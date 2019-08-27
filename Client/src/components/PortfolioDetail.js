@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Services from "../services/portfolio.services";
 
-// import '../styles/coaster-detail.css'
+import '../css/portfolio-detail.css'
 
 class PortfolioDetail extends Component {
   constructor(props) {

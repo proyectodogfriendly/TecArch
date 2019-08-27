@@ -13,7 +13,7 @@ const MyComponent = () => (
       type: 'oneByOne',
       onReady: console.log
     }}
-    style={{ height: '532px', width: '750px', top:'60px' , position: 'relative', margintop:'40px' , marginright: '0px', marginbottom: '0px',marginleft: '45vw' }}
+    style={{ height: '532px', width: '750px', top:'59px' , position: 'relative', margintop:'40px' , marginright: '0px', marginbottom: '0px',marginleft: '45vw' }}
     callback={console.log}
   />
 );

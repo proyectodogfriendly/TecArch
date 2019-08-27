@@ -40,12 +40,9 @@ class ProfileArq extends Component {
                   <div className="pr-title">
                     <h4 className="titulo-h4">Bienvenido a TecArch</h4>
                     <span>
-                      Es un hecho establecido hace demasiado tiempo que un
-                      lector se distraerá con el contenido del texto de un sitio
-                      mientras que mira su diseño. Es un hecho establecido hace
-                      demasiado tiempo que un lector se distraerá con el
-                      contenido del texto de un sitio mientras que mira su
-                      diseño.
+                      TecArch pone en marcha diferentes iniciativas en las que puedes participar y 
+                      aportar tu experiencia a favor del colectivo de arquitectos 
+                      para la generación de talento y el desarrollo de la actividad profesional.
                     </span>
                   </div>
 
@@ -85,7 +82,7 @@ class ProfileArq extends Component {
                 <div className="col-md-6 card-arquitecto">
                   <div className="pr-title">
                     <h4 className="titulo-h4">
-                      Bienvenido a TecArch Institución (vaya tela el git)
+                      Bienvenido Institución a TecArch 
                     </h4>
                     <span>
                       Es un hecho establecido hace demasiado tiempo que un
@@ -97,19 +94,13 @@ class ProfileArq extends Component {
                     </span>
                   </div>
 
-                  <Link
-                    className="btn btn-sm btn-tecarch"
-                    to={`/profile`}
-                    onClick={this.handleStateVis1}
-                  >
-                    Crear Portfolio
-                  </Link>
+                 
                   <Link
                     className="btn btn-sm btn-tecarch"
                     to={`/profile`}
                     onClick={this.handleStateVis2}
                   >
-                    Crear Propuesta
+                    Crear Concurso
                   </Link>
                 </div>
                 <div className="col-md-6">
