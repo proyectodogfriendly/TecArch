@@ -157,7 +157,7 @@ class CompetitionList extends Component {
           />
         </div>
         <div className="container titulo">
-          <h1>Listado de concursos de arquitetura </h1>
+          <h1 className="titulo-concurso">Listado de concursos de arquitetura </h1>
           <SearchCompetition
             searchCompetition={this.searchCompetition}
             placeholder="Search"

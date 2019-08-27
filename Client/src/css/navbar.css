@@ -48,7 +48,18 @@ ul {
     text-decoration: none;
     background: transparent;
 }
-
+.btn-menu{
+    display: block;
+    padding: 10px 0;
+    color:#363636;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    border:none;
+}
+ul{
+    margin-right: 2vw;
+}
 @media all and (min-width: 670px) {
 
     .toggle-menu {

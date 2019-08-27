@@ -32,7 +32,7 @@ class Inicio extends Component {
             </div>
           </div>
           <div className="container-fluid">
-            <Map />
+            {/* <Map /> */}
           </div>
         </div>
       </>

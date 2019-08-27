@@ -37,7 +37,7 @@ class NavBar extends Component {
             &equiv;{" "}
           </div>
           <header className="menu">
-            <img src="../logo-tec.png"/>
+            <img src="../img/logo-tec.png"/>
             <nav>
               <ul>
                 <li>
@@ -50,7 +50,7 @@ class NavBar extends Component {
                   <Link to="/portfolios">Portfolios</Link>
                 </li>
                 <li>
-                  <button onClick={this.logout}>Cerrar sesión</button>
+                  <button className="btn-menu" onClick={this.logout}>Cerrar sesión</button>
                 </li>
                 <li>
                   <small>Bienvenid@, {saludo}</small>

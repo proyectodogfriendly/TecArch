@@ -20,7 +20,7 @@ import Footer from "./components/Footer";
 
 import NavBar from "./components/Navbar";
 import Inicio from "./components/Inicio";
-import MyComponent from "./components/Vivus";
+
 
 class App extends Component {
   constructor() {
