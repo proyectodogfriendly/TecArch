@@ -22,10 +22,46 @@ router.get("/getOneCompetition/:id", (req, res) =>
 );
 
 //crear un concurso
-router.post("/postCompetition", (req, res) =>
-  Competition.create(req.body)
-    .then(theNewCompetition => res.json(theNewCompetition))
-    .catch(err => console.log(err))
-);
+router.post("/postCompetition", (req, res) => {
+  const {
+    imageUrl,
+    title,
+    category,
+    description,
+    address,
+    amount,
+    adjudicator,
+    state,
+    conditions
+  } = req.body.theNewCompetition;
+
+  Competition.create({
+    imageUrl,
+    title,
+    category,
+    description,
+    address,
+    amount,
+    adjudicator,
+    state,
+    conditions
+  })
+    .then(theNewCompetition => {
+      User.findByIdAndUpdate(
+        req.body.userId.data._id,
+        {
+          $push: {
+            pictures: theNewCompetition.imageUrl,
+            competition: theNewCompetition._id
+          }
+        },
+        { new: true }
+      ).then(user => {
+        console.log(theNewCompetition, user);
+        res.json({ theNewCompetition, user });
+      });
+    })
+    .catch(err => console.log(err));
+});
 
 module.exports = router;

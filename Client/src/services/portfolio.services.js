@@ -10,11 +10,10 @@ export default class Services {
     return this.service.get("getAllPortfolios");
   };
   getOnePortfolio = id => this.service.get(`getOnePortfolio/${id}`);
-  postPortfolio = theNewPortfolio =>
-    this.service.post(`postPortfolio`, theNewPortfolio);
+  postPortfolio = (theNewPortfolio, userId) =>
+    this.service.post(`postPortfolio`, { theNewPortfolio, userId });
 
   handleUpload = theFile => {
-    console.log(theFile);
     return this.service.post("upload", theFile);
   };
 }

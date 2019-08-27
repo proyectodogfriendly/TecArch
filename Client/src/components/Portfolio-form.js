@@ -24,9 +24,9 @@ class PortfolioForm extends Component {
 
   handleFormSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+
     this.service
-      .postPortfolio(this.state)
+      .postPortfolio(this.state, this.props.userInSession)
       .then(x => {
         this.props.closeModal();
         this.props.updatePortfolioList();
@@ -47,11 +47,14 @@ class PortfolioForm extends Component {
     }
     console.log(uploadData.getAll("imageUrl"));
     this.service.handleUpload(uploadData).then(response => {
-      console.log(response);
+      this.setState({
+        imageUrl: response.data.pictures
+      });
     });
   };
 
   render() {
+    console.log(this.props);
     return (
       <>
         {/* <h4 className="texto">Crear un nuevo portfolio</h4> */}

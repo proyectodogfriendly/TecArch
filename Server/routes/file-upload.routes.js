@@ -10,6 +10,7 @@ router.post("/upload", uploader.array("imageUrl"), (req, res, next) => {
     return;
   }
 
+  let userId = req.body;
   let payload = req.files;
 
   let pictures = payload.map(
@@ -21,11 +22,12 @@ router.post("/upload", uploader.array("imageUrl"), (req, res, next) => {
   );
   let savedImg = pictures.map(picture => picture.save());
   Promise.all(pictures).then(pictures => {
-    console.log(pictures);
+    // console.log(pictures);
+    // User.findByIdAndUpdate()
     res.json(pictures);
   });
 
-  // res.json({ pictures: pictures });
+  res.json({ pictures: pictures });
 });
 
 module.exports = router;

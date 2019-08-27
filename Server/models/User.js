@@ -9,7 +9,10 @@ const UserSchema = new Schema(
       type: String,
       enum: ["ADMIN", "INSTITUTION", "PROFESSIONAL"],
       default: "PROFESSIONAL"
-    }
+    },
+    portfolio: { type: Schema.Types.ObjectId, ref: "Portfolio" },
+    competition: { type: Schema.Types.ObjectId, ref: "Competition" },
+    pictures: [{ type: Schema.Types.ObjectId, ref: "Picture" }]
   },
   { timestamps: true }
 );

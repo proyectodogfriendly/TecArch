@@ -66,11 +66,11 @@ class ProfileArq extends Component {
                 </div>
                 <div className="col-md-6">
                   {this.state.visible1 && !this.state.visible2 && (
-                    <PortfolioForm />
+                    <PortfolioForm userInSession={this.props.userInSession} />
                   )}
 
                   {this.state.visible2 && !this.state.visible1 && (
-                    <ProposalForm />
+                    <ProposalForm userInSession={this.props.userInSession} />
                   )}
                 </div>
               </div>

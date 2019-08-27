@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const User = require("../models/User");
 const Portfolio = require("../models/portfolio");
 
 //listar los portfolios
@@ -22,10 +22,42 @@ router.get("/getOnePortfolio/:id", (req, res) =>
 );
 
 //crear un portfolio desde perfil arquitecto
-router.post("/postPortfolio", (req, res) =>
-  Portfolio.create(req.body)
-    .then(theNewPortfolio => res.json(theNewPortfolio))
-    .catch(err => console.log(err))
-);
+router.post("/postPortfolio", (req, res) => {
+  const {
+    nameArchitect,
+    nameStudio,
+    address,
+    mail,
+    phone,
+    description,
+    imageUrl
+  } = req.body.theNewPortfolio;
+
+  Portfolio.create({
+    nameArchitect,
+    nameStudio,
+    address,
+    mail,
+    phone,
+    description,
+    imageUrl
+  })
+    .then(theNewPortfolio => {
+      User.findByIdAndUpdate(
+        req.body.userId.data._id,
+        {
+          $push: {
+            pictures: theNewPortfolio.imageUrl,
+            portfolio: theNewPortfolio._id
+          }
+        },
+        { new: true }
+      ).then(user => {
+        console.log(theNewPortfolio, user);
+        res.json({ theNewPortfolio, user });
+      });
+    })
+    .catch(err => console.log(err));
+});
 
 module.exports = router;
