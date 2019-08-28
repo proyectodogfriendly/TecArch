@@ -19,7 +19,7 @@ const CompetitionCard = ({
     <div className="container">
       <div className="row">
         <div className="col-8">
-          <article className="compet-card">
+          <div className="compet-card">
             <div className="row">
                 <div className="col-3">
                   <div className="pr-title">
@@ -49,7 +49,7 @@ const CompetitionCard = ({
             </Link>
 
             <hr />
-          </article>
+          </div>
         </div>
         <div className="col-4">
           <article className="">
