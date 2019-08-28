@@ -29,7 +29,6 @@ class PortfolioForm extends Component {
       .postPortfolio(this.state, this.props.userInSession)
       .then(x => {
         this.props.updatePortfolioList();
-        // this.props.showToast();
       })
       .catch(err => console.log("error", err));
   };

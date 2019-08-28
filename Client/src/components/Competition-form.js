@@ -32,7 +32,6 @@ class CompetitionForm extends Component {
       .postCompetition(this.state, this.props.userInSession)
       .then(x => {
         this.props.updateCompetitionList();
-        // this.props.showToast();
       })
       .catch(err => console.log("error", err));
   };
