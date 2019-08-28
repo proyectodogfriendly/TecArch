@@ -24,11 +24,10 @@ class Inicio extends Component {
             <div className="wrapper">
               <div className="pos text" />
               <div className="pos plano1" />
-
               <div className="pos plano3" />
               <div className="pos plano4" />
               <div className="pos plano5" />
-              <div className="pos plano6" />
+              <div className="pos2 plano6" />
             </div>
           </div>
           <div className="container-fluid">

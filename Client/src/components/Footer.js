@@ -17,7 +17,7 @@ class Footer extends Component {
         <div className="">
           <div className="main-footer">
             <div className="fixed-title">
-              <span>Home Slider</span>
+              <span>TecArch</span>
             </div>
 
             <div className="footer-social">

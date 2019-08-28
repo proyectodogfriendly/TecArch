@@ -11,7 +11,7 @@
 #foo{
     width:720px;
     position: absolute;
-    margin: 10vh auto;
+	margin: 10vh auto;
 }
 
 .pos {
@@ -19,7 +19,16 @@
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 68vh;
+	animation: scaler3 9s ease-in;
+	animation-fill-mode: forwards;
+}
+.pos2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 71vh;
 	animation: scaler3 9s ease-in;
 	animation-fill-mode: forwards;
 }
@@ -37,6 +46,7 @@
 
 .plano1 {
 	background: url(../img/architec-completo-02.png);
+	position: absolute;
 	margin-top: 210px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -64,6 +74,7 @@
 
 .plano3 {
 	background: url(../img/architec-bloque-1-02.png)  ;
+	position: absolute;
 	margin-top: 210px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -78,6 +89,7 @@
 
 .plano4 {
 	background: url(../img/architec-bloque-2-02.png) ;
+	position: absolute;
 	margin-top: 210px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -92,6 +104,7 @@
 
 .plano5 {
 	background: url(../img/architec-bloque-3-02.png)  ;
+	position: absolute;
 	background-repeat: no-repeat;
 	margin-top: 210px;
     margin-right: 0px;
@@ -105,7 +118,8 @@
 } 
 
 .plano6 {
-	background: url(../img/final3.png)  ;
+	background: url(../img/final3.png);
+	position: absolute;
 	background-repeat: no-repeat;
 	margin-top: 160px;
     margin-right: 0px;
@@ -154,14 +168,9 @@
     
 }
 
-.ini2{
-    background-color: blue;
-}
 
 .casa-perps{
-    background-color: green;
     position:relative;
-    /* top:100px; */
     
 }
 
@@ -172,7 +181,6 @@
 
 #myVideo{
 	width: 100%;
-border:2px solid red;
 margin-top:15vh;
 }
 
