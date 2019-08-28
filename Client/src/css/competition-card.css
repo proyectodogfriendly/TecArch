@@ -11,11 +11,13 @@
 	opacity: 0.7;
 }
 
-
-.compet-card{
-    background-color: transparent; 
-    margin-bottom:20px; 
+.compet-card {
+	padding-top: 20px;
+	background-color: transparent;
+	margin-bottom: 35px;
+	padding-top: 35px;
 }
+
 .pr-title{
 	float:left;
 	font-size:24px;
@@ -25,7 +27,7 @@
 	position:relative;
 	padding-left:40px;
 	padding-right:20px;
-	padding-top: 20px;
+	/* padding-top: 20px; */
 }
 .pr-title span {
 	float:left;
@@ -63,14 +65,14 @@
 }
 
 .texto-p{
-    color:#363636;
+    color: #363636;
     font-family: 'Questrial', sans-serif;
     font-size: 1.2em;
-	margin-bottom: 5px;
-	padding-left:40px;
-	padding-right:20px;
-	padding-top: 20px;
-	text-align:left;
+    margin-bottom: 5px;
+    text-transform: none;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: left;
 }
 
 /*--------------------SECTION PROYECTO 1 -----------------*/

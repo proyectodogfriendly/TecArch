@@ -4,7 +4,7 @@ import Services from "../services/competition.services";
 import CompetitionCard from "./CompetitionCard";
 import Particles from "react-particles-js";
 import "../css/particles-style.css";
-import SearchCompetition from "./SearchCompetition";
+// import SearchCompetition from "./SearchCompetition";
 
 class CompetitionList extends Component {
   constructor() {
@@ -158,10 +158,10 @@ class CompetitionList extends Component {
         </div>
         <div className="container titulo">
           <h1 className="titulo-concurso">Listado de concursos de arquitetura </h1>
-          <SearchCompetition
+          {/* <SearchCompetition
             searchCompetition={this.searchCompetition}
             placeholder="Search"
-          />
+          /> */}
         </div>
 
         <div className="container fondo-parti">

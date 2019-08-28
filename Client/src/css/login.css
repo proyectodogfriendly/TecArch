@@ -33,7 +33,7 @@ input:-internal-autofill-selected {
     position:relative;
     padding-left:40px;
     padding-right:20px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .pr-title2 span {
