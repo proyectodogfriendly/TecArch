@@ -1,0 +1,71 @@
+#formuComp {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10vh;
+}
+
+.form-control {
+  background-color: #fff;
+  border-radius: 0px;
+  width: 100%;
+}
+
+.texto {
+  float: left;
+  font-size: 22px;
+  text-align: left;
+  font-family: "Questrial", sans-serif;
+  font-weight: 700;
+  position: relative;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin-top: 50px;
+}
+
+.titulo-h4 {
+  color: #262626;
+  font-family: "Questrial", sans-serif;
+  font-size: 1em;
+  margin-top: 0px;
+}
+
+.label-txt {
+  float: left;
+  width: 100%;
+  color: #262626;
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.btn-tecarch2 {
+  background-color: #262626;
+  color: #f5f5f5;
+  margin-right: 0px;
+  margin-left: 40px;
+  transition: all 200ms linear;
+}
+.btn-tecarch2:hover {
+  background-color: #363636;
+  color: #ffffff;
+  margin-right: 0px;
+  transition: all 200ms linear;
+}
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

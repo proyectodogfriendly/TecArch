@@ -10,8 +10,11 @@ export default class Services {
     return this.service.get("getAllProposals");
   };
   getOneProposal = id => this.service.get(`getOneProposal/${id}`);
-  postProposal = theNewProposal =>
-    this.service.post(`postProposal`, theNewProposal);
+  postProposal = (theNewProposal, userId) =>
+    this.service.post(`postProposal`, {
+      theNewProposal,
+      userId
+    });
   handleUpload = theFile => {
     console.log(theFile);
     return this.service.post("upload", theFile);

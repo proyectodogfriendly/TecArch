@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Competition = require("../models/competition");
+const User = require("../models/User");
 
 //listar los concursos
 router.get("/getAllCompetitions", (req, res) => {
@@ -23,6 +24,7 @@ router.get("/getOneCompetition/:id", (req, res) =>
 
 //crear un concurso
 router.post("/postCompetition", (req, res) => {
+  // console.log(req.body.userId);
   const {
     imageUrl,
     title,
@@ -47,6 +49,7 @@ router.post("/postCompetition", (req, res) => {
     conditions
   })
     .then(theNewCompetition => {
+      console.log(theNewCompetition);
       User.findByIdAndUpdate(
         req.body.userId.data._id,
         {

@@ -10,11 +10,10 @@ export default class Services {
     return this.service.get("getAllCompetitions");
   };
   getOneCompetition = id => this.service.get(`getOneCompetition/${id}`);
-  postCompetition = theNewCompetition =>
-    this.service.post(`postCompetition`, theNewCompetition);
+  postCompetition = (theNewCompetition, userId) =>
+    this.service.post(`postCompetition`, { theNewCompetition, userId });
   handleUpload = theFile => {
     console.log(theFile);
     return this.service.post("upload", theFile);
   };
-  //    handleUpload = theFile => this.service.post('/upload', theFile)
 }

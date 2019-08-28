@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Services from "../services/proposal.services";
-import '../css/proposal-form.css'
+import "../css/proposal-form.css";
 
 class ProposalForm extends Component {
   constructor(props) {
@@ -45,17 +45,24 @@ class ProposalForm extends Component {
     }
     console.log(uploadData.getAll("imageUrl"));
     this.service.handleUpload(uploadData).then(response => {
-      console.log(response);
+      this.setState({
+        imageUrl: response.data.pictures
+      });
     });
   };
 
   render() {
     return (
       <>
-
-        <form onSubmit={this.handleFormSubmit} id="portfolio" className="fade-in">
+        <form
+          onSubmit={this.handleFormSubmit}
+          id="portfolio"
+          className="fade-in"
+        >
           <div className="form-group">
-            <label className="label-txt" htmlFor="input-nameArchitect">Nombre</label>
+            <label className="label-txt" htmlFor="input-nameArchitect">
+              Nombre
+            </label>
             <input
               name="nameArchitect"
               type="text"
@@ -65,7 +72,9 @@ class ProposalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label className="label-txt" htmlFor="input-title">Título</label>
+            <label className="label-txt" htmlFor="input-title">
+              Título
+            </label>
             <input
               name="title"
               type="text"
@@ -75,7 +84,9 @@ class ProposalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label className="label-txt" htmlFor="input-category">Categoria</label>
+            <label className="label-txt" htmlFor="input-category">
+              Categoria
+            </label>
             <input
               name="category"
               type="text"
@@ -85,7 +96,9 @@ class ProposalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label className="label-txt" htmlFor="input-mail">Description</label>
+            <label className="label-txt" htmlFor="input-mail">
+              Description
+            </label>
             <input
               name="description"
               type="text"

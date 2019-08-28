@@ -11,7 +11,8 @@ const UserSchema = new Schema(
       default: "PROFESSIONAL"
     },
     portfolio: { type: Schema.Types.ObjectId, ref: "Portfolio" },
-    competition: { type: Schema.Types.ObjectId, ref: "Competition" },
+    competition: [{ type: Schema.Types.ObjectId, ref: "Competition" }],
+    proposal: [{ type: Schema.Types.ObjectId, ref: "Proposal" }],
     pictures: [{ type: Schema.Types.ObjectId, ref: "Picture" }]
   },
   { timestamps: true }

@@ -8,46 +8,56 @@
 	background-size: cover;
 } */
 
-#foo{
-    width:720px;
-    position: absolute;
-    margin: 10vh auto;
+#foo {
+  width: 720px;
+  position: absolute;
+  margin: 10vh auto;
 }
 
 .pos {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	animation: scaler3 9s ease-in;
-	animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 68vh;
+  animation: scaler3 9s ease-in;
+  animation-fill-mode: forwards;
+}
+.pos2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 71vh;
+  animation: scaler3 9s ease-in;
+  animation-fill-mode: forwards;
 }
 
 .text {
-	background: url(../img/logo-tec1.png) center center;
-	background-size: cover;
-	transform: translate3d(0, 30px, 0);
-	opacity: 0;
-	animation: moveUp 2s ease-out;
-	animation-fill-mode: forwards;
-	width: 100vw;
-	height: 100vh;
+  background: url(../img/logo-tec1.png) center center;
+  background-size: cover;
+  transform: translate3d(0, 30px, 0);
+  opacity: 0;
+  animation: moveUp 2s ease-out;
+  animation-fill-mode: forwards;
+  width: 100vw;
+  height: 100vh;
 }
 
 .plano1 {
-	background: url(../img/architec-completo-02.png);
-	margin-top: 210px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-	margin-left: 45vw;
-	background-repeat: no-repeat;
-	transform: scale3d(1.1, 1.1, 1.1);
-	opacity: 0;
-	animation: scaler 3.5s ease-in;
-	animation-fill-mode: forwards;
-	z-index:90;
-} 
+  background: url(../img/architec-completo-02.png);
+  position: absolute;
+  margin-top: 210px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 45vw;
+  background-repeat: no-repeat;
+  transform: scale3d(1.1, 1.1, 1.1);
+  opacity: 0;
+  animation: scaler 3.5s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 90;
+}
 
 /* .plano2 {
 	background: url(../img/architec-base-02.png);
@@ -63,116 +73,108 @@
 }  */
 
 .plano3 {
-	background: url(../img/architec-bloque-1-02.png)  ;
-	margin-top: 210px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 45vw;
-	background-repeat: no-repeat;
-	transform: scale3d(1.3, 1.3, 1.3);
-	opacity: 0;
-	animation: scaler 5.5s ease-in;
-	animation-fill-mode: forwards;
-	z-index:90;
-}  
+  background: url(../img/architec-bloque-1-02.png);
+  position: absolute;
+  margin-top: 210px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 45vw;
+  background-repeat: no-repeat;
+  transform: scale3d(1.3, 1.3, 1.3);
+  opacity: 0;
+  animation: scaler 5.5s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 90;
+}
 
 .plano4 {
-	background: url(../img/architec-bloque-2-02.png) ;
-	margin-top: 210px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 650px;
-	background-repeat: no-repeat;
-	transform: scale3d(1.3, 1.3, 1.3);
-	opacity: 0;
-	animation: scaler 6.5s ease-in-out;
-	animation-fill-mode: forwards;
-	z-index:90;
+  background: url(../img/architec-bloque-2-02.png);
+  position: absolute;
+  margin-top: 210px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 650px;
+  background-repeat: no-repeat;
+  transform: scale3d(1.3, 1.3, 1.3);
+  opacity: 0;
+  animation: scaler 6.5s ease-in-out;
+  animation-fill-mode: forwards;
+  z-index: 90;
 }
 
 .plano5 {
-	background: url(../img/architec-bloque-3-02.png)  ;
-	background-repeat: no-repeat;
-	margin-top: 210px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 45vw;
-	transform: scale3d(1.3, 1.3, 1.3);
-	opacity: 0;
-	animation: scaler 7.2s ease-out;
-	animation-fill-mode: forwards;
-	z-index:90;
-} 
+  background: url(../img/architec-bloque-3-02.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  margin-top: 210px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 45vw;
+  transform: scale3d(1.3, 1.3, 1.3);
+  opacity: 0;
+  animation: scaler 7.2s ease-out;
+  animation-fill-mode: forwards;
+  z-index: 90;
+}
 
 .plano6 {
-	background: url(../img/final3.png)  ;
-	background-repeat: no-repeat;
-	margin-top: 160px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-	margin-left: 40vw;
-	opacity: 0;
-	animation: scaler 4s linear 5s forwards;
-	z-index: 95;
-}  
+  background: url(../img/final3.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  margin-top: 160px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 40vw;
+  opacity: 0;
+  animation: scaler 4s linear 5s forwards;
+  z-index: 95;
+}
 
 @keyframes scaler {
-	100% {
-		transform: scale3d(1, 1, 1);
-		opacity: 1;
-	}
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
 }
 @keyframes scaler2 {
-	100% {
-		transform: scale3d(1, 1, 1);
-		opacity: 1;
-	}
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
 }
 @keyframes scaler3 {
-	100% {
-		transform: scale3d(1, 1, 1);
-		opacity: 0;
-	}
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 0;
+  }
 }
 
 @keyframes moveUp {
-	100% {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
-
-.ini{
-	top: 74px;
-    position: relative;
-    /* margin-top: 37px; */
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 43vw;
-
-    
+.ini {
+  top: 74px;
+  position: relative;
+  /* margin-top: 37px; */
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 43vw;
 }
 
-.ini2{
-    background-color: blue;
+.casa-perps {
+  position: relative;
 }
 
-.casa-perps{
-    background-color: green;
-    position:relative;
-    /* top:100px; */
-    
+.section {
+  text-align: center;
+  overflow: hidden;
 }
 
-.section{
-	text-align:center;
-	overflow: hidden;
+#myVideo {
+  width: 100%;
+  margin-top: 15vh;
 }
-
-#myVideo{
-	width: 100%;
-border:2px solid red;
-margin-top:15vh;
-}
-
