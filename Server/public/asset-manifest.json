@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.110d56b7.chunk.css",
+    "main.js": "/static/js/main.cdd67cac.chunk.js",
+    "main.js.map": "/static/js/main.cdd67cac.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.c546661d.js",
+    "runtime~main.js.map": "/static/js/runtime~main.c546661d.js.map",
+    "static/js/2.5d0ad0ea.chunk.js": "/static/js/2.5d0ad0ea.chunk.js",
+    "static/js/2.5d0ad0ea.chunk.js.map": "/static/js/2.5d0ad0ea.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1fda06c54b3c7af4cdbc7062ef228bf2.js": "/precache-manifest.1fda06c54b3c7af4cdbc7062ef228bf2.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.110d56b7.chunk.css.map": "/static/css/main.110d56b7.chunk.css.map",
+    "static/media/inicio.css": "/static/media/logo-tec1.42056a6b.png",
+    "static/media/casa-croquis.svg": "/static/media/casa-croquis.43f9ae75.svg",
+    "static/media/login.css": "/static/media/fondo-3.738feece.png",
+    "static/media/signup.css": "/static/media/fondo-formu3.0ee24c73.png",
+    "static/media/profile-arq.css": "/static/media/institucion.1f6098a1.png"
+  }
+}
