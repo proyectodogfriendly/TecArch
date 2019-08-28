@@ -151,12 +151,6 @@ class PortfolioForm extends Component {
           <button type="submit" className="btn btn-tecarch2">
             Crear
           </button>
-          {/* <button
-            className="btn btn-dark btn-sm"
-            onClick={this.props.closeModal}
-          >
-            Cerrar
-          </button>  */}
         </form>
       </>
     );

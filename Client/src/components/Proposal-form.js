@@ -27,7 +27,6 @@ class ProposalForm extends Component {
       .postProposal(this.state)
       .then(x => {
         this.props.updateProposalList();
-        // this.props.showToast();
       })
       .catch(err => console.log("error", err));
   };
@@ -123,12 +122,6 @@ class ProposalForm extends Component {
           <button type="submit" className="btn btn-dark btn-sm">
             Crear
           </button>
-          {/* <button
-            className="btn btn-dark btn-sm"
-            onClick={this.props.closeModal}
-          >
-            Cerrar
-          </button>  */}
         </form>
       </>
     );
