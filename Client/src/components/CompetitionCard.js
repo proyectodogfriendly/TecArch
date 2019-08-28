@@ -20,19 +20,26 @@ const CompetitionCard = ({
       <div className="row">
         <div className="col-8">
           <article className="compet-card">
-            <div className="pr-title">
-              <h4 className="titulo-h4">{title}</h4>
-              <span>
-                <h3 className="titulo-h3">Dirección: {address}</h3>
-                <h3 className="titulo-h3">Adjudicatario: {adjudicator}</h3>
-                <h3 className="titulo-h3">Categoría: {category}</h3>
-                <h3 className="titulo-h3">Estado:{state}</h3>
-                <h3 className="titulo-h3">Presupuesto:{amount}</h3>
-                <h3 className="titulo-h3">Condiciones: {conditions}</h3>
-                <h3 className="titulo-h3">Descripción:</h3>
-              </span>
+            <div className="row">
+                <div className="col-3">
+                  <div className="pr-title">
+                    <h4 className="titulo-h4">{title}</h4>
+                    <span>
+                      <h3 className="titulo-h3">Dirección: {address}</h3>
+                      <h3 className="titulo-h3">Adjudicatario: {adjudicator}</h3>
+                      <h3 className="titulo-h3">Categoría: {category}</h3>
+                      <h3 className="titulo-h3">Estado:{state}</h3>
+                      <h3 className="titulo-h3">Presupuesto:{amount}</h3>
+                      <h3 className="titulo-h3">Condiciones: {conditions}</h3>
+                      <h3 className="titulo-h3">Descripción:</h3>
+                    </span>
+                  </div>
+                </div>
+                <div className="col-5">
+                  <p className="texto-p"> {description}</p>
+                </div>
             </div>
-            <p className="texto-p"> {description}</p>
+            
 
             <Link className="btn btn-sm btn-tecarch5" to={`/login`}>
               Añadir propuesta
