@@ -28,7 +28,6 @@ class PortfolioForm extends Component {
     this.service
       .postPortfolio(this.state, this.props.userInSession)
       .then(x => {
-        this.props.closeModal();
         this.props.updatePortfolioList();
         // this.props.showToast();
       })

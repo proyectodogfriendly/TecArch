@@ -26,7 +26,6 @@ class ProposalForm extends Component {
     this.service
       .postProposal(this.state)
       .then(x => {
-        this.props.closeModal();
         this.props.updateProposalList();
         // this.props.showToast();
       })

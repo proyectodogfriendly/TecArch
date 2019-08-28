@@ -31,7 +31,6 @@ class CompetitionForm extends Component {
     this.service
       .postCompetition(this.state, this.props.userInSession)
       .then(x => {
-        this.props.closeModal();
         this.props.updateCompetitionList();
         // this.props.showToast();
       })
