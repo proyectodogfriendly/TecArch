@@ -61,4 +61,5 @@ const CompetitionCard = ({
   );
 };
 
+
 export default CompetitionCard;
