@@ -13,7 +13,7 @@
     left: 0;
 	overflow: hidden;
 	opacity: 0;
-	animation: apareceFooter 4s ease-out;
+	animation: apareceFooter 14s ease-out;
 	animation-fill-mode: forwards;
     border-right: 1px solid rgba(38,38,38,0.4);
     -webkit-transform: translate3d(0,0,0);

@@ -6,7 +6,6 @@ import "../css/profile-arq.css";
 import PortfolioForm from "../components/Portfolio-form";
 import ProposalForm from "../components/Proposal-form";
 import CompetitionForm from "../components/Competition-form";
-
 import { Redirect } from "react-router-dom";
 
 class ProfileArq extends Component {
@@ -81,7 +80,7 @@ class ProfileArq extends Component {
           <>
             <div className="container" id="fondoInstitucion">
               <div className="row">
-                <div className="col-md-6 card-arquitecto">
+                <div className="col-md-4 card-arquitecto">
                   <div className="pr-title">
                     <h4 className="titulo-h4">
                       Bienvenido Institución a TecArch
@@ -104,7 +103,7 @@ class ProfileArq extends Component {
                     Crear Concurso
                   </Link>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-8">
                   {this.state.visible1 && !this.state.visible2 && (
                     <CompetitionForm userInSession={this.props.userInSession} />
                   )}
