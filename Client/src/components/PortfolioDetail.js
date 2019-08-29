@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Services from "../services/portfolio.services";
 
 import '../css/portfolio-detail.css'
+import Myparallax from "../components/Myparallax";
 
 class PortfolioDetail extends Component {
   constructor(props) {
@@ -20,48 +21,54 @@ class PortfolioDetail extends Component {
 
   render() {
     return (
-      <div className="container">
-        <article className="portfolio-detail">
-          <div className="row justify-content-center">
-            <div className="col-md-6">
-              <h1>Detalles de {this.state.Portfolio.title}</h1>
-              <p>
-                <strong>Nombre Arquitecto/a:</strong>{" "}
-                {this.state.Portfolio.nameArchitect}
-              </p>
+      <div className="container-fuid">
+          <div className="container">
+            <h1 className="titulo-detalle">
+              Detalles de {this.state.Portfolio.title}
+            </h1>
 
-              <p>
-                <strong>Nombre del estudio:</strong>{" "}
-                {this.state.Portfolio.nameStudio}
-              </p>
-              <p>
-                <strong>Imágenes:</strong> {this.state.Portfolio.imageUrl}
-              </p>
-              <p>
-                <strong>Dirección:</strong> {this.state.Portfolio.address}
-              </p>
+            <div className="row justify-content-center"> 
+                  <div className="col-md-12 datos-arqu">
+                    <div className="pr-title6">
+                      <span >Nombre Arquitecto/a:</span>{" "}
+                      {this.state.Portfolio.nameArchitect}
+                      <br></br>
+                      <span>Nombre del estudio:</span>{" "}
+                      {this.state.Portfolio.nameStudio}
+                      <br></br>
+                      <span>Dirección:</span> {this.state.Portfolio.address}
+                      <br></br>
+                      <span>Mail:</span> {this.state.Portfolio.mail}
+                      <br></br>
+                      <span>Teléfono:</span> {this.state.Portfolio.phone}
+                      <br></br>
+                      <span>Descripción del arquitecto:</span>{" "}
+                        {this.state.Portfolio.description}
+                    </div>
 
-              <p>
-                <strong>Mail:</strong> {this.state.Portfolio.mail}
-              </p>
-              <p>
-                <strong>Teléfono:</strong> {this.state.Portfolio.phone}
-              </p>
-              <p>
-                <strong>Descripción del arquitecto:</strong>{" "}
-                {this.state.Portfolio.description}
-              </p>
-
-              <hr />
-              <Link className="btn btn-big btn-dark" to="/portfolios">
-                Volver a portfolios
-              </Link>
-            </div>
-          </div>
-        </article>
+                   
+                    {/* <p>
+                      <strong>Imágenes:</strong> {this.state.Portfolio.imageUrl}
+                    </p> */}
+                 
+                  </div>
+                  <div className="">
+                      <Link className="btn btn-big btn-dark" to="/portfolios">
+                        Volver a portfolios
+                      </Link>
+                  </div> 
+            </div> 
+            <div className="row justify-content-center">    
+                <div className="col-12">
+                  <Myparallax/>
+                </div>
+            </div> 
+        </div>
       </div>
+     
     );
   }
 }
 
 export default PortfolioDetail;
+

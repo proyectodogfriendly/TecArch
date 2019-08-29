@@ -21,6 +21,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/Navbar";
 import Inicio from "./components/Inicio";
 
+import Map from "./components/Map";
 
 class App extends Component {
   constructor() {
@@ -112,8 +113,11 @@ class App extends Component {
           />
         </Switch>
         <Footer />
+        {/* <Map/> */}
       </>
     );
   }
 }
 export default App;
+
+
