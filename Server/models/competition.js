@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const competitionSchema = new Schema(
   {
-    imageUrl: [String],
+    imageUrl: [{ type: Schema.Types.ObjectId, ref: "Picture" }],
     title: { type: String, require: true },
     category: { type: String, require: true },
     description: { type: String, require: true },
@@ -11,7 +11,8 @@ const competitionSchema = new Schema(
     amount: { type: Number, require: true },
     adjudicator: { type: String, require: true },
     state: { type: String, require: true },
-    conditions: { type: String, require: true }
+    conditions: { type: String, require: true },
+    proposals: [{ type: Schema.Types.ObjectId, ref: "Proposal" }]
   },
   {
     timestamps: true

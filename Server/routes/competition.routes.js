@@ -7,6 +7,7 @@ const User = require("../models/User");
 //listar los concursos
 router.get("/getAllCompetitions", (req, res) => {
   Competition.find()
+    .populate("imageUrl")
     .then(comp => {
       res.json(comp);
       console.log(comp);
@@ -18,6 +19,7 @@ router.get("/getAllCompetitions", (req, res) => {
 
 router.get("/getOneCompetition/:id", (req, res) =>
   Competition.findById(req.params.id)
+    .populate("imageUrl")
     .then(theCompetition => res.json(theCompetition))
     .catch(err => console.log(err))
 );

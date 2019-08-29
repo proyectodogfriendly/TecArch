@@ -18,10 +18,9 @@ const PortfolioCard = ({
       <div className="flip-card-inner">
         <Link className="enlace" to={`/portfolios/${_id}`}>
           <div className="flip-card-front">
-            <img className="img-card" src={imageUrl} alt={""} />
-            {/* <h4 className="nombreArq">{nameArchitect}</h4>  */}
-            {/* <h4>{address}</h4>
-                        <p>{phone}</p> */}
+            {imageUrl[0] && (
+              <img className="img-card" src={imageUrl[0].imgPath} alt={""} />
+            )}
           </div>
         </Link>
       </div>

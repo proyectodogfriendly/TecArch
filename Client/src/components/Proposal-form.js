@@ -7,10 +7,10 @@ class ProposalForm extends Component {
     super(props);
     this.state = {
       nameArchitect: "",
-      imageUrl: "",
       title: "",
       category: "",
-      description: ""
+      description: "",
+      imageUrl: []
     };
     this.service = new Services();
   }
@@ -24,18 +24,26 @@ class ProposalForm extends Component {
     e.preventDefault();
     console.log(this.state);
     this.service
-      .postProposal(this.state)
+      .postProposal(
+        this.state,
+        this.props.userInSession,
+        this.props.competitionId
+      )
       .then(x => {
-        this.props.closeModal();
-        this.props.updateProposalList();
-        // this.props.showToast();
+        console.log("holaaaaaa");
+        this.setState({
+          nameArchitect: "",
+          title: "",
+          category: "",
+          description: "",
+          imageUrl: []
+        });
       })
       .catch(err => console.log("error", err));
   };
 
   handleFileUpload = e => {
     console.dir(e.target);
-    // const uploadData = new FormData();
 
     const uploadData = new FormData();
     const { files } = e.target;
@@ -65,6 +73,7 @@ class ProposalForm extends Component {
             </label>
             <input
               name="nameArchitect"
+              value={this.state.nameArchitect}
               type="text"
               className="form-control"
               id="input-nameArchitect"
@@ -77,6 +86,7 @@ class ProposalForm extends Component {
             </label>
             <input
               name="title"
+              value={this.state.title}
               type="text"
               className="form-control"
               id="input-title"
@@ -89,6 +99,7 @@ class ProposalForm extends Component {
             </label>
             <input
               name="category"
+              value={this.state.category}
               type="text"
               className="form-control"
               id="input-category"
@@ -101,6 +112,7 @@ class ProposalForm extends Component {
             </label>
             <input
               name="description"
+              value={this.state.description}
               type="text"
               className="form-control"
               id="input-description"
@@ -124,12 +136,6 @@ class ProposalForm extends Component {
           <button type="submit" className="btn btn-dark btn-sm">
             Crear
           </button>
-          {/* <button
-            className="btn btn-dark btn-sm"
-            onClick={this.props.closeModal}
-          >
-            Cerrar
-          </button>  */}
         </form>
       </>
     );

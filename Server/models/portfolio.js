@@ -5,7 +5,7 @@ const portfolioSchema = new Schema(
   {
     nameArchitect: { type: String, require: true },
     nameStudio: { type: String, require: true },
-    imageUrl: [String], //array
+    imageUrl: [{ type: Schema.Types.ObjectId, ref: "Picture" }], //array
     address: { type: String, require: true },
     mail: { type: String, require: true },
     phone: { type: Number, require: true },

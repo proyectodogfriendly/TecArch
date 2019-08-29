@@ -20,7 +20,7 @@ import Footer from "./components/Footer";
 
 import NavBar from "./components/Navbar";
 import Inicio from "./components/Inicio";
-
+import CompetitionCard from "./components/CompetitionCard";
 
 class App extends Component {
   constructor() {
@@ -67,28 +67,6 @@ class App extends Component {
             )}
           />
           <Route
-            path="/"
-            exact
-            render={match => (
-              <Inicio
-                className="casa-perps"
-                {...match}
-                setUser={this.setTheUser}
-              />
-            )}
-          />
-          <Route
-            path="/"
-            exact
-            render={match => (
-              <Inicio
-                className="casa-perps"
-                {...match}
-                setUser={this.setTheUser}
-              />
-            )}
-          />
-          <Route
             path="/signup"
             exact
             render={match => <Signup {...match} setUser={this.setTheUser} />}
@@ -98,8 +76,19 @@ class App extends Component {
             exact
             render={match => <Login {...match} setUser={this.setTheUser} />}
           />
-          <Route path="/competitions" exact component={CompetitionList} />
-          <Route path="/proposals" exact component={ProposalList} />
+          <Route
+            path="/competitions"
+            exact
+            render={() => (
+              <CompetitionList userInSession={this.state.loggedInUser} />
+            )}
+          />
+
+          <Route
+            path="/proposals/competitions/:id"
+            exact
+            component={ProposalList}
+          />
           <Route path="/proposals/:id" exact component={ProposalDetail} />
           <Route path="/portfolios" exact component={PortfolioList} />
           <Route path="/portfolios/:id" exact component={PortfolioDetail} />

@@ -15,17 +15,14 @@ class ProposalList extends Component {
 
   componentDidMount() {
     this.services
-      .getAllProposals()
+      .getAllProposals(this.props.match.params.id)
       .then(response => {
-        console.log(response);
-        this.setState({ proposals: response.data });
+        this.setState({ proposals: response.data.proposals });
       })
       .catch(err => console.log(err));
   }
 
   render() {
-    console.log(this.state.proposals);
-    console.log(this.script);
     return (
       <>
         <div className="container">

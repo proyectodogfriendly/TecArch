@@ -31,9 +31,18 @@ class CompetitionForm extends Component {
     this.service
       .postCompetition(this.state, this.props.userInSession)
       .then(x => {
-        this.props.closeModal();
-        this.props.updateCompetitionList();
-        // this.props.showToast();
+        console.log("holaaaaaa");
+        this.setState({
+          title: "",
+          category: "",
+          description: "",
+          address: "",
+          amount: "",
+          adjudicator: "",
+          state: "",
+          conditions: "",
+          imageUrl: []
+        });
       })
       .catch(err => console.log("error", err));
   };
@@ -75,6 +84,7 @@ class CompetitionForm extends Component {
                 </label>
                 <input
                   name="title"
+                  value={this.state.title}
                   type="text"
                   className="form-control"
                   id="input-title"
@@ -87,6 +97,7 @@ class CompetitionForm extends Component {
                 </label>
                 <input
                   name="category"
+                  value={this.state.category}
                   type="text"
                   className="form-control"
                   id="input-category"
@@ -101,6 +112,7 @@ class CompetitionForm extends Component {
                 </label>
                 <input
                   name="amount"
+                  value={this.state.amount}
                   type="number"
                   className="form-control"
                   id="input-amount"
@@ -113,6 +125,7 @@ class CompetitionForm extends Component {
                 </label>
                 <input
                   name="adjudicator"
+                  value={this.state.adjudicator}
                   type="text"
                   className="form-control"
                   id="input-description"
@@ -129,6 +142,7 @@ class CompetitionForm extends Component {
                 </label>
                 <input
                   name="state"
+                  value={this.state.state}
                   type="text"
                   className="form-control"
                   id="input-state"
@@ -143,6 +157,7 @@ class CompetitionForm extends Component {
                 </label>
                 <input
                   name="address"
+                  value={this.state.address}
                   type="text"
                   className="form-control"
                   id="input-mail"
@@ -157,6 +172,7 @@ class CompetitionForm extends Component {
             </label>
             <input
               name="description"
+              value={this.state.description}
               type="textarea"
               className="form-control"
               id="input-description"
@@ -184,6 +200,7 @@ class CompetitionForm extends Component {
             </label>
             <input
               name="conditions"
+              value={this.state.conditions}
               type="text"
               className="form-control"
               id="input-conditions"
@@ -194,12 +211,6 @@ class CompetitionForm extends Component {
           <button type="submit" className="btn btn-dark btn-sm">
             Crear
           </button>
-          {/* <button
-            className="btn btn-dark btn-sm"
-            onClick={this.props.closeModal}
-          >
-            Cerrar
-          </button>  */}
         </form>
       </>
     );

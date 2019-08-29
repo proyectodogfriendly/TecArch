@@ -12,8 +12,6 @@ class ProfileArq extends Component {
   constructor() {
     super();
     this.state = {
-      showModal: false,
-      showToast: false,
       visible1: false,
       visible2: false
     };

@@ -2,10 +2,12 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const Portfolio = require("../models/portfolio");
+const mongoose = require("mongoose");
 
 //listar los portfolios
 router.get("/getAllPortfolios", (req, res) => {
   Portfolio.find()
+    .populate("imageUrl")
     .then(port => {
       res.json(port);
       console.log(port);
@@ -15,11 +17,16 @@ router.get("/getAllPortfolios", (req, res) => {
 
 //mostrar detalle de un portfolio
 
-router.get("/getOnePortfolio/:id", (req, res) =>
+router.get("/getOnePortfolio/:id", (req, res) => {
+  console.log(req.params);
   Portfolio.findById(req.params.id)
-    .then(thePortfolio => res.json(thePortfolio))
-    .catch(err => console.log(err))
-);
+    .populate("imageUrl")
+    .then(thePortfolio => {
+      console.log(thePortfolio);
+      res.json(thePortfolio);
+    })
+    .catch(err => console.log(err));
+});
 
 //crear un portfolio desde perfil arquitecto
 router.post("/postPortfolio", (req, res) => {
@@ -33,6 +40,10 @@ router.post("/postPortfolio", (req, res) => {
     imageUrl
   } = req.body.theNewPortfolio;
 
+  let pic = imageUrl.map(img => {
+    return new mongoose.mongo.ObjectId(img._id);
+  });
+
   Portfolio.create({
     nameArchitect,
     nameStudio,
@@ -40,7 +51,7 @@ router.post("/postPortfolio", (req, res) => {
     mail,
     phone,
     description,
-    imageUrl
+    imageUrl: pic
   })
     .then(theNewPortfolio => {
       User.findByIdAndUpdate(

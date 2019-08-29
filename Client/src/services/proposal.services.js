@@ -6,14 +6,19 @@ export default class Services {
       withCredentials: true
     });
   }
-  getAllProposals = () => {
-    return this.service.get("getAllProposals");
+  getAllProposals = competitionId => {
+    console.log(competitionId);
+    return this.service.post("getAllProposals", {
+      competitionId
+    });
   };
   getOneProposal = id => this.service.get(`getOneProposal/${id}`);
-  postProposal = (theNewProposal, userId) =>
+
+  postProposal = (theNewProposal, userId, competitionId) =>
     this.service.post(`postProposal`, {
       theNewProposal,
-      userId
+      userId,
+      competitionId
     });
   handleUpload = theFile => {
     console.log(theFile);

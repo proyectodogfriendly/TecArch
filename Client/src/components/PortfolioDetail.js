@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Services from "../services/portfolio.services";
 
-import '../css/portfolio-detail.css'
+import "../css/portfolio-detail.css";
 
 class PortfolioDetail extends Component {
   constructor(props) {
     super(props);
-    this.state = { Portfolio: {} };
+    this.state = { Portfolio: null };
     this.service = new Services();
   }
-
   componentDidMount() {
     this.service
       .getOnePortfolio(this.props.match.params.id)
@@ -19,48 +18,52 @@ class PortfolioDetail extends Component {
   }
 
   render() {
-    return (
-      <div className="container">
-        <article className="portfolio-detail">
-          <div className="row justify-content-center">
-            <div className="col-md-6">
-              <h1>Detalles de {this.state.Portfolio.title}</h1>
-              <p>
-                <strong>Nombre Arquitecto/a:</strong>{" "}
-                {this.state.Portfolio.nameArchitect}
-              </p>
+    if (this.state.Portfolio) {
+      console.log(this.state.Portfolio.imageUrl);
 
-              <p>
-                <strong>Nombre del estudio:</strong>{" "}
-                {this.state.Portfolio.nameStudio}
-              </p>
-              <p>
-                <strong>Imágenes:</strong> {this.state.Portfolio.imageUrl}
-              </p>
-              <p>
-                <strong>Dirección:</strong> {this.state.Portfolio.address}
-              </p>
-
-              <p>
-                <strong>Mail:</strong> {this.state.Portfolio.mail}
-              </p>
-              <p>
-                <strong>Teléfono:</strong> {this.state.Portfolio.phone}
-              </p>
-              <p>
-                <strong>Descripción del arquitecto:</strong>{" "}
-                {this.state.Portfolio.description}
-              </p>
-
-              <hr />
-              <Link className="btn btn-big btn-dark" to="/portfolios">
-                Volver a portfolios
-              </Link>
+      return (
+        <div className="container">
+          <article className="portfolio-detail">
+            <div className="row justify-content-center">
+              <div className="col-md-6">
+                <h1>Detalles de {this.state.Portfolio.title}</h1>
+                <p>
+                  <strong>Nombre Arquitecto/a:</strong>{" "}
+                  {this.state.Portfolio.nameArchitect}
+                </p>
+                <p>
+                  <strong>Nombre del estudio:</strong>{" "}
+                  {this.state.Portfolio.nameStudio}
+                </p>
+                Imágenes:
+                {this.state.Portfolio.imageUrl.map((img, idx) => {
+                  return <img src={img.imgPath} alt="whatevere" key={idx} />;
+                })}
+                <p>
+                  <strong>Dirección:</strong> {this.state.Portfolio.address}
+                </p>
+                <p>
+                  <strong>Mail:</strong> {this.state.Portfolio.mail}
+                </p>
+                <p>
+                  <strong>Teléfono:</strong> {this.state.Portfolio.phone}
+                </p>
+                <p>
+                  <strong>Descripción del arquitecto:</strong>{" "}
+                  {this.state.Portfolio.description}
+                </p>
+                <hr />
+                <Link className="btn btn-big btn-dark" to="/portfolios">
+                  Volver a portfolios
+                </Link>
+              </div>
             </div>
-          </div>
-        </article>
-      </div>
-    );
+          </article>
+        </div>
+      );
+    } else {
+      return <h1>Waiting.....</h1>;
+    }
   }
 }
 

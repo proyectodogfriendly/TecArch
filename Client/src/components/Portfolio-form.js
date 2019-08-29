@@ -24,13 +24,20 @@ class PortfolioForm extends Component {
 
   handleFormSubmit = e => {
     e.preventDefault();
-
+    console.log(this.state);
     this.service
       .postPortfolio(this.state, this.props.userInSession)
       .then(x => {
-        this.props.closeModal();
-        this.props.updatePortfolioList();
-        // this.props.showToast();
+        console.log("holaaaaaa");
+        this.setState({
+          nameArchitect: "",
+          nameStudio: "",
+          address: "",
+          mail: "",
+          phone: "",
+          description: "",
+          imageUrl: []
+        });
       })
       .catch(err => console.log("error", err));
   };
@@ -70,6 +77,7 @@ class PortfolioForm extends Component {
             </label>
             <input
               name="nameArchitect"
+              value={this.state.nameArchitect}
               type="text"
               className="form-control"
               id="input-nameArchitect"
@@ -82,6 +90,7 @@ class PortfolioForm extends Component {
             </label>
             <input
               name="nameStudio"
+              value={this.state.nameStudio}
               type="text"
               className="form-control"
               id="input-nameStudio"
@@ -94,6 +103,7 @@ class PortfolioForm extends Component {
             </label>
             <input
               name="address"
+              value={this.state.address}
               type="text"
               className="form-control"
               id="input-address"
@@ -106,6 +116,7 @@ class PortfolioForm extends Component {
             </label>
             <input
               name="mail"
+              value={this.state.mail}
               type="text"
               className="form-control"
               id="input-mail"
@@ -118,6 +129,7 @@ class PortfolioForm extends Component {
             </label>
             <input
               name="phone"
+              value={this.state.phone}
               type="number"
               className="form-control"
               id="input-phone"
@@ -130,6 +142,7 @@ class PortfolioForm extends Component {
             </label>
             <input
               name="description"
+              value={this.state.description}
               type="text"
               className="form-control"
               id="input-description"
@@ -153,12 +166,6 @@ class PortfolioForm extends Component {
           <button type="submit" className="btn btn-tecarch2">
             Crear
           </button>
-          {/* <button
-            className="btn btn-dark btn-sm"
-            onClick={this.props.closeModal}
-          >
-            Cerrar
-          </button>  */}
         </form>
       </>
     );
