@@ -100,6 +100,7 @@
   animation: scaler 6.5s ease-in-out;
   animation-fill-mode: forwards;
   z-index: 90;
+
 }
 
 .plano5 {
@@ -115,6 +116,7 @@
   animation: scaler 7.2s ease-out;
   animation-fill-mode: forwards;
   z-index: 90;
+
 }
 
 .plano6 {
@@ -177,4 +179,37 @@
 #myVideo {
   width: 100%;
   margin-top: 15vh;
+}
+
+
+.espacio{
+  padding-top:20px;
+ 
+}
+
+.bg-video {
+  padding-top: 80px;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 96vw;
+}
+#section04 a span {
+  position: absolute;
+  top: 85vh;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: -12px;
+  border-radius: 15px;
+  border-left: 3px solid #363636;
+  border-right: 3px solid #363636;
+  border-bottom: 3px solid #363636;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-sizing: border-box;
+  opacity: 0;
+  animation: scaler 4s linear 5s forwards;
+  z-index: 95;
 }

@@ -4,7 +4,7 @@ import Services from "../services/competition.services";
 import CompetitionCard from "./CompetitionCard";
 import Particles from "react-particles-js";
 import "../css/particles-style.css";
-import SearchCompetition from "./SearchCompetition";
+// import SearchCompetition from "./SearchCompetition";
 
 class CompetitionList extends Component {
   constructor() {

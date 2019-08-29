@@ -22,6 +22,8 @@ import NavBar from "./components/Navbar";
 import Inicio from "./components/Inicio";
 import CompetitionCard from "./components/CompetitionCard";
 
+import Map from "./components/Map";
+
 class App extends Component {
   constructor() {
     super();
@@ -101,6 +103,7 @@ class App extends Component {
           />
         </Switch>
         <Footer />
+        {/* <Map/> */}
       </>
     );
   }
